@@ -149,6 +149,7 @@ form{
     display: flex;
     flex-direction: column;
     margin: 0 auto;
+    padding: 0 24px;
 }
 
 input, textarea {
@@ -224,6 +225,19 @@ ul{
 
 #discord .section_description{
     flex-direction: column-reverse;
+}
+
+.footer__logo{
+    max-width: 400px;
+}
+
+.footer__link{
+    padding: 0 4px;
+    font-size: 18px;
+}
+
+.footer__links{
+    margin-bottom: 24px;
 }
 
 }
