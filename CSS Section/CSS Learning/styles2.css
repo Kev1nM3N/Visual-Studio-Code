@@ -1,0 +1,13 @@
+div{
+    height: 200px;
+    border: 2px solid black;
+}
+
+.red{
+    background-color: red;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+}
