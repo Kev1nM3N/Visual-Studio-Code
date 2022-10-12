@@ -139,7 +139,6 @@ nav{
 
 .about-me__picture{
     width: 100%;
-
     /*improving my own picture*/
     transform: scale(1.4);
 }
@@ -169,6 +168,8 @@ nav{
 
 .about-me__img{
     width: 100%;
+    margin-bottom: 24px;
+    margin-top: 36px;
 }
 
 /*Tech Stacl*/
