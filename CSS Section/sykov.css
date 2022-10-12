@@ -89,6 +89,7 @@ li{
 
 #about{
     background-color: #f8ffdc;
+    padding: 48px 0px;
 }
 
 h2{
@@ -124,6 +125,8 @@ img{
 }
 
 
+/*Discord*/
+
 #Discord {
     background-color: #cefeff;
 }
@@ -146,6 +149,10 @@ input, textarea {
     margin-bottom: 24px;
     font-size: 24px;
     padding: 6px 12px;
+}
+
+textarea{
+    padding-bottom: 258px;
 }
 
 
@@ -183,7 +190,7 @@ footer {
     align-items: center;
 }
 
-.home__description--button{
+button{
     max-width: 240px;
 }
 
