@@ -50,16 +50,6 @@ button{
     border-radius: 0.4em;
 }
 
-.button{
-    background-color: #05c7cf;
-    cursor: pointer;
-}
-
-.button:hover{
-    background-color: darkcyan;
-    color: white;
-}
-
 
 a{
     color: #000;
