@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+a{
+    text-decoration: none;
+    list-style: none;
+}
+
+.row{
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    border: 2px red solid;
+}
+
+nav{
+    border: 2px black solid;
+    display: flex;
+    justify-content: space-between;
+    padding: 32px;
+}
+
+.logo__react{
+    display: flex;
+    align-items: center;
+}
+
+.logo{
+    height: 50px;
+    width: 50px;
+    margin-right: 12px;
+}
+
+.nav__links{
+    display: flex;
+    align-items: center;
+}
+
+.nav__link{
+    padding: 0 24px;
+}
+
+
+
