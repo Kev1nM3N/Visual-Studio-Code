@@ -105,6 +105,7 @@ nav{
 .intro__para{
     font-size: 18px;
     margin: 32px 0;
+    color: #243e63;
 }
 
 .twocolumn__input{
@@ -286,3 +287,4 @@ nav{
     border: 1px solid rgb(226, 232, 240);
     width: 100%;
 }
+
