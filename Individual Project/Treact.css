@@ -371,3 +371,166 @@ nav{
 .box-6{
     width: 100%;
 }
+
+/*FIFTH SECTION*/
+
+.container6{
+    width: 100%;
+    max-width: 1200px;
+    padding: 92px 0px;
+    text-align: center;
+}
+
+.intro__para3{
+    color: #7C8BA1;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.625;
+    max-width: 36rem;
+    margin: 0 auto;
+}
+
+.plans{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 2rem;
+}
+
+.plan{
+    margin-top: 4rem;
+    margin-right: 2rem;
+    width: calc(100% / 3);
+    max-width: 22rem;
+    display: flex;
+    flex-direction: column;
+    border-radius: 0.5rem;
+}
+
+.business__plan{
+    margin-top: 4rem;
+    margin-right: 2rem;
+    width: calc(100% / 3);
+    max-width: 22rem;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid;
+    border-radius: 0.5rem;
+    background-image: linear-gradient(135deg, rgb(76, 81, 191) 0%, rgb(102, 126, 234) 100%);
+    color: white;
+}
+
+.plan__feature1{
+    margin-top: 1.25rem;
+}
+
+.plan__monthly1{
+    font-weight: 700;
+    letter-spacing: 0.1em;
+}
+
+.plan__button1{
+    border-radius: 9999px;
+    border: none;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-weight: 700;
+    cursor: pointer;
+    width: 75%;
+    color: #6415ff;
+}
+
+.plan__button2{
+    border-radius: 9999px;
+    border: none;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-weight: 700;
+    cursor: pointer;
+    width: 75%;
+    background: linear-gradient(115deg, rgb(245, 101, 101) 0%, rgb(254, 178, 178) 100%);
+    color: white;
+}
+
+.solid__border--color1{
+    height: 0.5rem;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+}
+
+.solid__border--color2{
+    height: 0.5rem;
+    background: linear-gradient(115deg, rgb(245, 101, 101) 0%, rgb(254, 178, 178) 100%);
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+}
+
+.solid__border--color{
+    height: 0.5rem;
+    background: linear-gradient(115deg, rgb(56, 178, 172) 0%, rgb(129, 230, 217) 100%);
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+}
+
+.little__box{
+    padding: 2rem 0;
+}
+
+.plan__title{
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+.plan__price{
+    font-size: 3rem;
+    font-weight: 700;
+    margin: 0.25rem 0;
+}
+
+.plan__monthly{
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    color: rgb(160 174 192);
+}
+
+.plan__feature{
+    color: rgb(113 128 150);
+    margin-top: 1.25rem;
+    font-weight: 500;
+}
+
+hr{
+    border: 1px solid rgb(226, 232, 240);
+}
+
+.blue__line{
+    border: 1px solid rgb(99, 149, 219);
+}
+
+.box__button{
+    padding: 2rem 1rem;
+}
+
+.plan__button{
+    background: linear-gradient(115deg, rgb(56, 178, 172) 0%, rgb(129, 230, 217) 100%);
+    border-radius: 9999px;
+    border: none;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: rgb(247 250 252);
+    font-weight: 700;
+    cursor: pointer;
+    width: 75%;
+}
+
+.plan__button:hover{
+    
+}
