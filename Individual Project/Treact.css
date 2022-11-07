@@ -533,9 +533,37 @@ hr{
     width: 60%;
 }
 
-.plan__button:hover{
+.plan__button:hover, .plan__button2:hover{
     transform: translate(2px, -2px);
     transition: all 300ms ease;
     box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1);
     color: rgb(237 242 247);
+}
+
+.plan__button1:hover{
+    transform: translate(2px, -2px);
+    transition: all 300ms ease;
+    box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1);
+    color: rgb(70 15 179);
+}
+
+
+/*SECTION 6*/
+
+.container7{
+    width: 100%;
+    max-width: 1200px;
+    padding: 92px 0px;
+    border: 2px solid yellow;
+    display: flex;
+}
+
+.box-10{
+    width: 50%;
+    border: 2px solid green;
+}
+
+.box-11{
+    width: 50%;
+    border: 2px solid black;
 }
