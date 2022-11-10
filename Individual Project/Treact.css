@@ -5,10 +5,7 @@
     font-family: Inter, system-ui;
 }
 
-body{
-    padding-left: 2rem;
-    padding-right: 2rem;
-}
+
 
 a{
     text-decoration: none;
@@ -168,6 +165,11 @@ nav{
 
 /*Welcome Page*/
 
+main{
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
 .purple{
     color: #6415ff;
 }
@@ -175,7 +177,7 @@ nav{
 .container{
     width: 100%;
     max-width: 1200px;
-    padding: 92px 32px;
+    padding: 6rem 26px;
     margin: 0 auto;
     display: flex;
 }
@@ -940,12 +942,99 @@ footer{
 
 
 /*Smartphones, tablets and large desktops*/
-@media (max-width: 1020px){
+
+@media (max-width: 1280px){
+    .first__title{
+        font-size: 2.25rem;
+        width: 483px;
+        height: 90px;
+    }
+
+    .intro__para{
+        font-size: 1rem;
+    }
+
+    .right__side{
+        display: flex;
+        justify-content: end;
+        align-items: flex-end;
+    }
+
+
+    .illustration{
+        width: 100%;
+        max-width: 32rem;
+    }
+}
+
+
+@media (max-width: 1023px){
     .nav__links{
         display: none;
     }
 
     .btn__menu{
         display: block;
+        font-size: 1.5rem;
     }
+    
+    .container{
+        padding: 6rem 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .left__side{
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        max-width: 32rem;
+        text-align: center;
+        display: flex;
+        align-items: center;
+    }
+
+    .first__title{
+        width: 512px;
+        height: 38px;
+        font-size: 1.875rem;
+    }
+
+    .intro__para{
+        margin: 0;
+        font-size: 1rem;
+    }
+
+    .featured{
+        margin-top: 3rem;
+    }
+
+    .trust__customers{
+        font-size: 0.875rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        color: rgb(160 174 192);
+    }
+
+    .logo{
+        height: 2.5rem;
+        width: 2.5rem;
+    }
+
+    .logo__strip{
+        margin-top: 1rem;
+        width: 100%;
+        opacity: 0.5;
+    }
+
+    .right__side{
+        margin-top: 3rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+
 }
