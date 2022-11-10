@@ -1036,5 +1036,71 @@ footer{
         justify-content: center;
     }
 
+}
 
+@media (max-width:640px){
+
+    .row2{
+        padding: 0 2rem;
+    }
+
+    .first__title{
+        width: 100%;
+        min-height: 100%;
+    }
+
+    .intro__para{
+        width: 100%;
+    }
+
+    .twocolumn__input{
+        position: static;
+    }
+
+    .input__target{
+        width: 100%;
+        border-radius: 9999px;
+        border-width: 2px;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        padding-left: 2rem;
+        font-weight: 500;
+    }
+
+    .second__button{
+        position: static;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        margin-right: 0.5rem;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+}
+
+@media (max-width:564px){
+
+    .intro__para{
+        margin-top: calc(1.25rem * 2);
+    }
+
+    .input__target{
+    }
+}
+
+@media (max-width: 343px){
+    .intro__para{
+        margin-top: calc(1.25rem * 4);
+    }
+
+    .right__side{
+        margin-top: 3rem;
+        width: 218px;
+    }
+
+    .illustration{
+        width: 100%;
+    }
 }
