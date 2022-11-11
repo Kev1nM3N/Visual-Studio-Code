@@ -13,9 +13,9 @@ a{
     font-weight: 600;
 }
 
-/*LANDING
+/*
 
-PAGE
+                THIS IS THE FIRST SECTION -1-
 
 */
 
@@ -163,13 +163,6 @@ nav{
     color: #7342d6;
 }
 
-/*Welcome Page*/
-
-main{
-    padding-left: 2rem;
-    padding-right: 2rem;
-}
-
 .purple{
     color: #6415ff;
 }
@@ -269,8 +262,16 @@ main{
     width: 100%;
 }
 
-/*1st SECTION*/
+/*
 
+                                            THIS IS THE SECOND SECTION -2-
+
+*/
+
+main{
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
 
 .other__title{
     font-size: 16px;
@@ -299,8 +300,6 @@ main{
     padding-top: 96px;
     text-align: center;
 }
-
-/*TRYING THIS SERVICES THING AGAIN*/
 
 .services{
     display: flex;
@@ -340,7 +339,13 @@ main{
     color: rgb(124 139 161);
 }
 
-/*2ND SECTION*/
+
+/*
+
+                                            THIS IS THE THIRD SECTION -3-
+
+*/
+
 
 .container11{
     width: 100%;
@@ -451,8 +456,21 @@ main{
 
 /*Fourth Section*/
 
+.containerA{
+    width: 100%;
+    padding: 90px 0;
+    display: flex;
+}
+
 .box-5{
     width: 100%;
+}
+
+.description12{
+    text-align: left;
+    margin-top: 1rem;
+    line-height: 1.625;
+    color: rgb(113 128 150);
 }
 
 .box-6{
@@ -1062,6 +1080,12 @@ footer{
         font-size: 2.25rem;
     }
 
+    .two__box{
+        display: flex;
+        flex-direction: column;
+        max-width: 18rem;
+    }
+
 }
 
 @media (max-width:768px){
@@ -1130,11 +1154,12 @@ footer{
         flex-direction: column;
     }
 
+    
     .box-3{
         width: 70%;
         margin: 0 auto;
     }
-
+    
     .box-4{
         margin-top: 4rem;
         margin-left: auto;
@@ -1144,18 +1169,62 @@ footer{
         padding: 0;
         text-align: center;
     }
-
+    
     .number__box{
         display: flex;
         flex-direction: column;
     }
-
+    
     .new__description{
         margin: 0 auto;
     }
-
+    
     .service__title1{
         margin-top: 1rem;
+    }
+
+
+    .containerA{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .box-6{
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        max-width: 28rem;
+    }
+
+    .box-5{
+        margin-top: 5rem;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        max-width: 28rem;
+        text-align: center;
+    }
+
+    .two__box{
+        margin: 0 auto;
+    }
+
+    .left__box{
+        margin-top: 2.5rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .right__box{
+        margin-top: 2.5rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .description12{
+        text-align: center;
     }
 }
 
@@ -1236,8 +1305,9 @@ footer{
         margin-top: calc(1.25rem * 2);
     }
 
+
     .service{
-        width: 172px;
+        width: calc(100% / 2);
     }
 
     .box-3{
