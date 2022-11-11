@@ -271,6 +271,7 @@ main{
 
 /*1st SECTION*/
 
+
 .other__title{
     font-size: 16px;
     font-weight: 700;
@@ -299,17 +300,14 @@ main{
     text-align: center;
 }
 
+/*TRYING THIS SERVICES THING AGAIN*/
+
 .services{
     display: flex;
     flex-wrap: wrap;
-    margin: 16px;
+    justify-content: center;
 }
 
-.service{
-    display: flex;
-    width: calc(100% / 3);
-    padding: 32px 20px;
-}
 
 .icon__container{
     border: rgb(226, 232, 240) solid;
@@ -317,6 +315,14 @@ main{
     border-width: 1px;
     padding: 1.25rem;
     height: 67px;
+}
+
+.service{
+    display: flex;
+    width: calc(100%/4);
+    margin-left: 1rem;
+    margin-right: 1rem;
+    padding: 2rem 0.5rem;
 }
 
 .service__description{
@@ -1036,6 +1042,51 @@ footer{
         justify-content: center;
     }
 
+    /*1ST SECTION*/
+
+    .service{
+        width: calc(100% / 3);
+    }
+
+}
+
+@media (max-width:767px){
+    .service{
+        width: calc(100% / 2);
+    }
+
+    .intro__para1{
+        font-size: 0.875rem;
+    }
+
+    .second__title{
+        width: 100%;
+    }
+}
+
+@media (max-width:639px){
+    .second__title{
+        font-size: 2.25rem;
+    }
+
+    .service{
+        margin-left: 1rem;
+        margin-right: 1rem;
+        display: flex;
+        height: 100%;
+        flex-direction: column;
+        align-items: center;
+        padding: 2rem 0.5rem;
+        text-align: center;
+    }
+
+    .service__title{
+        text-align: center;
+    }
+
+    .description{
+        text-align: center;
+    }
 }
 
 @media (max-width:640px){
@@ -1086,8 +1137,10 @@ footer{
         margin-top: calc(1.25rem * 2);
     }
 
-    .input__target{
+    .service{
+        width: 172px;
     }
+
 }
 
 @media (max-width: 343px){
