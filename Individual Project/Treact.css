@@ -827,33 +827,41 @@ h5{
 */
 
 
-.container8{
+.row__alpha{
     width: 100%;
-    max-width: 1200px;
-    padding: 96px 0;
-
+    max-width: 1280px;
+    margin: 0 auto;
 }
 
-.get__started{
+.container8{
     width: 100%;
-    padding: 92px 0px;
-    border-radius: 0.5rem;
-    background-color: rgb(100 21 255);
-    border-color: rgb(226, 232, 240);
-    text-align: left;
+    padding: 6rem 0;
 }
 
 .rectangle{
-    padding: 0 32px;
-    margin: 0 82px;
-    display: flex;
-    justify-content: space-around;
+    padding: 5rem 0;
+    border-radius: 0.5rem;
+    background-color: rgb(100 21 255);
+    text-align: left;
 }
 
-.get__started--heading{
+.get__started{
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
     max-width: 1024px;
-    width: 60%;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    text-align: left;
 }
+
+
+.get__started--heading{
+    max-width: 32rem;
+}
+
 
 .started__text{
     font-size: 1.875rem;
@@ -861,25 +869,27 @@ h5{
     color:rgb(247 250 252);
 }
 
+
 .get__started--buttons{
-    width: 50%;
     display: flex;
-    align-items: center;
-    justify-content: flex-end;
 }
+
 
 .get__started--link{
     border-radius: 9999px;
     border-width: 1px;
-    font-weight: 700;
     margin-right: 2rem;
     padding: 1.25rem 2.5rem;
-    font-size: 1rem;
     letter-spacing: 0.025em;
     border-color: transparent;
-    color: #f7fafc;
     background-color: #f56565;
     cursor: pointer;
+}
+
+.link__font{
+    color: white;
+    font-weight: 700;
+    font-size: 1rem;
 }
 
 .get__started--link:hover{
@@ -890,21 +900,30 @@ h5{
 .get__started--link1{
     border-radius: 9999px;
     border-width: 1px;
-    font-weight: 700;
     padding: 1.25rem 2.5rem;
-    font-size: 1rem;
     letter-spacing: 0.025em;
     border-color: rgba(160, 174, 192, 1);
-    color: #f7fafc;
     background-color: rgb(100 21 255);
     cursor: pointer;
 }
 
+.link__font1{
+    color: #f7fafc;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.link__font1:hover{
+    color: rgb(100 21 255);
+}
+
 .get__started--link1:hover{
-    background-color: rgb(247 250 252);
+    background-color: #f7fafc;
     color: rgb(100 21 255);
     transition: all 300ms ease;
 }
+
+
 
 
 
@@ -920,7 +939,7 @@ h5{
     width: 100%;
     background-color: #6415ff;
     padding: 24px;
-    margin-top: 128px;
+    margin-top: 120px;
     height: 475px;
 }
 
@@ -1204,6 +1223,30 @@ footer{
         font-size: 1rem;
     }
 
+    /*EIGHTH SECTION*/
+
+    .get__started{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .get__started--buttons{
+        margin-top: 1.5rem;
+    }
+
+    .get__started--link{
+        width: auto;
+        padding: 1rem 2rem;
+        font-size: 1rem;
+    }
+
+    .get__started--link1{
+        width: auto;
+        padding: 1rem 2rem;
+        font-size: 1rem;
+    }
+
 }
 
 @media (max-width:768px){
@@ -1457,6 +1500,30 @@ footer{
         height: 24px;
     }
 
+    .started__text{
+        font-size: 1.5rem;
+    }
+
+    .get__started--buttons{
+        display: flex;
+        flex-direction: column;
+        max-width: 32rem;
+    }
+
+    .get__started--link{
+        margin: 0;
+        padding: 12px 24px;
+    }
+
+    .link__font{
+        font-size: 16px;
+    }
+
+    .get__started--link1{
+        margin-top: 16px;
+        padding: 12px 24px;
+    }
+
 }
 
 @media (max-width:640px){
@@ -1538,5 +1605,9 @@ footer{
 
     .third__title{
         font-size: 1.875rem;
+    }
+
+    .started__text{
+        text-align: center;
     }
 }
