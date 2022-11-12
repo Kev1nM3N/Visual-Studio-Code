@@ -167,7 +167,7 @@ nav{
     color: #6415ff;
 }
 
-.container{
+.container{                          /*THIS IS CONTAINER HERE*/
     width: 100%;
     max-width: 1200px;
     padding: 6rem 26px;
@@ -396,7 +396,13 @@ main{
     width: 100%;
 }
 
-/*Third Section*/
+
+/*
+
+                                            THIS IS THE FOURTH SECTION -4-
+
+*/
+
 
 .container5{
     width: 100%;
@@ -454,7 +460,13 @@ main{
     line-height: 2;
 }
 
-/*Fourth Section*/
+
+/*
+
+                                            THIS IS THE FIFTH SECTION -5-
+
+*/
+
 
 .containerA{
     width: 100%;
@@ -468,6 +480,7 @@ main{
 
 .description12{
     text-align: left;
+    padding-right: 2rem;
     margin-top: 1rem;
     line-height: 1.625;
     color: rgb(113 128 150);
@@ -496,7 +509,13 @@ main{
     width: 100%;
 }
 
-/*FIFTH SECTION*/
+
+/*
+
+                                            THIS IS THE SIXTH SECTION -6-
+
+*/
+
 
 .container6{
     width: 100%;
@@ -516,7 +535,6 @@ main{
 
 .plans{
     display: flex;
-    flex-wrap: wrap;
     margin-left: 2rem;
 }
 
@@ -672,7 +690,13 @@ hr{
 }
 
 
-/*SECTION 6*/
+
+/*
+
+                                            THIS IS THE SEVENTH SECTION -7-
+
+*/
+
 
 .container7{
     width: 100%;
@@ -776,7 +800,13 @@ h5{
 }
 
 
-/*SECTION 7*/
+
+/*
+
+                                            THIS IS THE EIGHTH SECTION -8-
+
+*/
+
 
 .container8{
     width: 100%;
@@ -858,7 +888,13 @@ h5{
 }
 
 
-/*FINAL PART*/
+
+/*
+
+                                            THIS IS THE NINTH SECTION -9-
+
+*/
+
 
 
 #ending{
@@ -908,8 +944,6 @@ h5{
 
 
 
-
-
 .final__line{
     margin-top: 4rem;
     margin-bottom: 4rem;
@@ -917,6 +951,14 @@ h5{
     border-bottom-width: 1px;
     border-color: rgb(116 44 255);
 }
+
+
+
+/*
+
+                                            THIS IS THE FOOTER
+
+*/
 
 
 
@@ -973,7 +1015,14 @@ footer{
 }
 
 
-/*Smartphones, tablets and large desktops*/
+
+/*
+
+               WE REACHED THE END. THIS FINAL PART IS FOR SMARTHPHONES, TABLETS, LARGE COMPUTERS AND SMALL PHONES!
+
+*/
+
+
 
 @media (max-width: 1280px){
     .first__title{
@@ -1086,6 +1135,38 @@ footer{
         max-width: 18rem;
     }
 
+    .left__box, .right__box{
+        margin-top: 1rem;
+    }
+
+    /*SIXTH SECTION*/
+
+    .intro__para3{
+        width: 100%;
+        text-align: center;
+        font-size: 1rem;
+        margin-top: 1rem;
+        max-width: 36rem;
+        font-weight: 500;
+        line-height: 1.625;
+        color: rgb(124 139 161);
+    }
+
+    .plans{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .plan{
+        width: 100%;
+        max-width: 24rem;
+    }
+
+    .business__plan{
+        width: 100%;
+        max-width: 24rem;
+    }
+
 }
 
 @media (max-width:768px){
@@ -1097,8 +1178,18 @@ footer{
         width: calc(100% / 2);
     }
 
+    .intro__para{
+        margin-top: 1.25rem;
+        margin-bottom: 1.25rem;
+        font-size: 1rem;
+    }
+
     .intro__para1{
         font-size: 0.875rem;
+    }
+
+    .description12{
+        padding: 0;
     }
 
     .second__title{
@@ -1226,9 +1317,24 @@ footer{
     .description12{
         text-align: center;
     }
+
+    /*SIXTH SECTION*/
+
+    .little__box2{
+        padding: 2rem;
+    }
+
+    .plan__price{
+        font-size: 2.25rem;
+    }
 }
 
 @media (max-width:639px){
+
+    .first__title{
+        margin-bottom: 1.25rem;
+    }
+
     .second__title{
         font-size: 2.25rem;
     }
