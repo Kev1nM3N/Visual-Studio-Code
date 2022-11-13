@@ -96,11 +96,22 @@ nav{
 .menu--open .menu__backdrop{
     visibility: visible;
     opacity: 1;
+    animation: float 200ms;
 }
 
-.menu--open{
-    overflow-y: hidden;
-    transition: all 300ms ease;
+.menu--open{ /*JAVASCRIPT*/
+    overflow-y: hidden; /*SCROLL BAR*/
+    transition: all 200ms ease;
+}
+
+@keyframes float{
+    0%{
+        transform: translateX(0);
+    }
+
+    100%{
+        transform: translateX(-6rem);
+    }
 }
 
 .menu__links{
@@ -162,6 +173,7 @@ nav{
     padding: 8px;
     color: #7342d6;
 }
+
 
 .purple{
     color: #6415ff;
