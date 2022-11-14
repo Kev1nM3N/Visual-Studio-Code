@@ -87,6 +87,12 @@ PRACTICE OUR CODING!!!
 
 */
 
+#practice__tab{
+    border: 2px solid red;
+    text-align: center;
+    width: auto;
+}
+
 
 .first__button{
     animation: float 2000ms infinite alternate-reverse;
@@ -108,4 +114,9 @@ PRACTICE OUR CODING!!!
     100%{
         transform: translateY(6rem);
     }
+}
+
+.new__tab{
+    border: 2px solid blue;
+    width: 100%;
 }
