@@ -19,6 +19,21 @@ a{
 
 */
 
+#landing{
+    animation-name: left-in;
+    animation-duration: 1s;
+}
+
+@keyframes left-in{
+    0%{
+        transform: translateX(-100rem);
+    }
+
+    100%{
+        transform: translateX(0);
+    }
+}
+
 .row{
     width: 100%;
     max-width: 1200px;
@@ -96,12 +111,12 @@ nav{
 .menu--open .menu__backdrop{
     visibility: visible;
     opacity: 1;
-    animation: float 200ms;
+    animation: float 200ms ease-out;
 }
 
 .menu--open{ /*JAVASCRIPT*/
     overflow-y: hidden; /*SCROLL BAR*/
-    transition: all 200ms ease;
+    transition: all 200ms ease-out;
 }
 
 @keyframes float{
@@ -110,9 +125,10 @@ nav{
     }
 
     100%{
-        transform: translateX(-6rem);
+        transform: translateX(-24rem);
     }
 }
+
 
 .menu__links{
     display: flex;
@@ -292,6 +308,21 @@ input:focus {
 main{
     padding-left: 2rem;
     padding-right: 2rem;
+}
+
+#right-in{
+    animation-name: right-in;
+    animation-duration: 1s;
+}
+
+@keyframes right-in{
+    0%{
+        transform: translateX(100rem);
+    }
+
+    100%{
+        transform: translateX(0);
+    }
 }
 
 .other__title{
