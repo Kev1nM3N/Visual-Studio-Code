@@ -1,0 +1,32 @@
+*{
+  box-sizing: border-box;
+}
+
+body{
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: #414141;
+}
+
+header{
+  text-align: center;
+  margin: 6rem auto; /*In this declaration, the "auto" is centering the header on left and right.*/
+  max-width: 65rem; /*You have to guess what the width will be if there is a certain way you want the words to be each line*/
+  padding: 0 2rem;
+  outline: 2px solid red;
+}
+
+h1{
+  font-size: 4rem;
+  margin: 0;
+}
+
+.subtitle{
+  font-size: 2.25rem;
+}
+
+.container {
+  width: 90%;
+  max-width: 39rem;
+  margin: 0 auto;
+}
