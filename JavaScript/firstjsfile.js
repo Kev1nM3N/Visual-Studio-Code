@@ -1,6 +1,10 @@
+let greeting = "Hello";
+let myName = " Nick";
+greeting + myName;
 
-function greet(){
-    console.log('Hello World');
-}
+console.log(greeting + myName);
 
-greet();
+"Supercalifragilisticexpialidocious".length;
+
+let myname = "Mosh";
+console.log(myname);
