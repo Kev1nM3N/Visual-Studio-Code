@@ -1,10 +1,14 @@
-let greeting = "Hello";
-let myName = " Nick";
-greeting + myName;
+let cash = 420;
+let price = 420;
 
-console.log(greeting + myName);
+if (cash > price){
+    console.log (`you paid extra. Here's ${cash - price} change.`)
+}
 
-"Supercalifragilisticexpialidocious".length;
+else if (cash === price){
+    console.log("You paid exact. Have a nice day")
+}
 
-let myname = "Mosh";
-console.log(myname);
+else{
+    console.log(`Not enough money. Give me ${price - cash} money`)
+}
