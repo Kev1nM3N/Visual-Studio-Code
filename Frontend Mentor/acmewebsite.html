@@ -8,25 +8,26 @@
     <meta name="author" content="Kevin Mendez">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./pencil.png">
     <title>Acme Web Design | Welcome</title>
     <link rel="stylesheet" href="./acmestyles.css">
 </head>
 <body>
     <header>
         <div class="container">
-            <div class="branding">
-                <h1>Acme Web Design</h1>
+            <div id="branding"> <!--This whole time I was struggling for an hour and realized this was supposed to be a id! not a div-->
+                <h1><span class="highlight">Acme </span>Web Design</h1>
             </div>
             <nav>
                 <ul>
-                    <li>
+                    <li class="current">
                         <a href="acmewebsite.html">Home</a>
                     </li>
                     <li>
                         <a href="about.html">About</a>
                     </li>
                     <li>
-                        <a href="serivces.html"><i>Services</i></a>
+                        <a href="serivces.html"><i>Services</i></a> <!--Let's create a dropdown menu for this-->
                     </li>
                 </ul>
             </nav>
