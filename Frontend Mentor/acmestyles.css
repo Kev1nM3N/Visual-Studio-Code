@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&family=PT+Serif:wght@400;700&display=swap');
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: PT serif, Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body{
+    font-size: 16px;
+    line-height: 1.5;
+    background-color: #f4f4f4;
+}
+
+
+/*This is Global*/
+.container{
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+header{
+    background-color: #35424a;
+    color: white; /*Links will always be done separtely. This did not affect the links when this was set.*/
+    padding-top: 30px;
+    min-height: 70px; /*We don't want this to go any smaller*/
+    border-bottom: #e8491d 3px solid;
+}
+
+header a{ /*I did not know this, so you can just call an a tag with the header and that works too.*/
+    color: white;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+header ul{
+    list-style-type: none; /*So I tried putting this in header a but that did nothing. I suppose that was targeting the link. not the list!*/
+    /*So... By putting display flex here, this will make the li become horizontal. It has something
+    to do with the fact that display flex only affects the children of this element with auto width and auto height. If
+    I were to put display inline here, nothing happens. Which, I believe is because there are no other ul's to be inline with!*/
+}
+
+header li{
+    display: inline;
+    padding: 0 20px;
+}
+
