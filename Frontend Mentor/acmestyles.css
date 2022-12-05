@@ -21,6 +21,15 @@ body{
     overflow: hidden;
 }
 
+.button1{
+    height: 25px;
+    background-color: orange;
+    border: none;
+    padding: 0 20px;
+    color: whitesmoke;
+}
+
+
 header{
     background-color: #35424a;
     color: white; /*Links will always be done separtely. This did not affect the links when this was set.*/
@@ -85,3 +94,25 @@ header a:hover{
 #showcase p{
     font-size: 20px;
 }
+
+#newsletter{
+    padding: 15px;
+    color: #ffff;
+    background-color: #35424a;
+}
+
+#newsletter h1{
+    float: left;
+}
+
+#newsletter form{
+    float: right;
+    margin-top: 6px;
+}
+
+#newsletter input[type="email"]{ /*This is much more specific pertaining to the email input!*/
+    padding: 4px;
+    height: 25px;
+    width: 250px;
+}
+
