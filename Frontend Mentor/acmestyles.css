@@ -17,7 +17,7 @@ body{
 /*This is Global*/
 .container{
     width: 80%;
-    margin: auto;
+    margin: 0 auto;
     overflow: hidden;
 }
 
@@ -27,6 +27,13 @@ body{
     border: none;
     padding: 0 20px;
     color: whitesmoke;
+    cursor: pointer;
+}
+
+.button1:hover{
+    background-color: aqua;
+    color: #35424a;
+    font-weight: 700;
 }
 
 
@@ -80,7 +87,7 @@ header a:hover{
 
 #showcase{
     min-height: 400px;
-    background: url("./marek-piwnicki-unsplash-medium.jpg") no-repeat 0 -200px; /*This was a matter of resizing the image yourself. not using any css to edit the scale or anything like that.*/
+    background: url("./marek-piwnicki-unsplash-medium.jpg") no-repeat ; /*This was a matter of resizing the image yourself. not using any css to edit the scale or anything like that.*/
     background-size: cover; /*This makes sure the browser uses the image to fit the entire space. It may mean that the image will be cropped. But remember this is a background image. The text is more important.*/
     text-align: center;
     color: #f3efef;
@@ -116,3 +123,23 @@ header a:hover{
     width: 250px;
 }
 
+/*BOXES*/
+
+#boxes{
+    margin-top: 20px;
+}
+
+#boxes .box{
+    float: left;
+    width: calc(100% / 3);
+    padding: 10px;
+    text-align: center;
+}
+
+footer{
+    padding: 20px;
+    margin-top: 20px;
+    color: white;
+    background-color: #e8491d;
+    text-align: center;
+}
