@@ -21,6 +21,13 @@ body{
     overflow: hidden;
 }
 
+.dark{
+    padding: 15px;
+    background-color: #35424a;
+    color: white;
+    margin: 10px 0;
+}
+
 .button1{
     height: 25px;
     background-color: orange;
@@ -106,6 +113,7 @@ header a:hover{
     padding: 15px;
     color: #ffff;
     background-color: #35424a;
+    border-top: #e8491d 3px solid;
 }
 
 #newsletter h1{
@@ -142,4 +150,36 @@ footer{
     color: white;
     background-color: #e8491d;
     text-align: center;
+}
+
+/*ABOUT PAGE*/
+
+aside#sidebar{           /*So apparently, by adding a space between aside and #sidebar, the layout is much different. By connecting them they have their own respective boxes. By separating them, They are on top of each other*/
+    float: right;
+    width: 30%;
+    margin-top: 10px;
+}
+
+aside#sidebar .quote input, textarea{
+    width: 90%;
+    padding: 5px;
+}
+
+article#main-col{
+    float: left;
+    width: 65%;
+    margin-top: 20px;
+}
+
+.page-title{
+    margin: 1em 0;
+    font-size: 1.5em;
+}
+
+ul#services li{
+    list-style-type: none;
+    padding: 20px;
+    border: gray solid 1px;
+    margin-bottom: 5px;
+    background-color: #e6e6e6;
 }
