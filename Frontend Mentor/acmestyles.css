@@ -183,3 +183,33 @@ ul#services li{
     margin-bottom: 5px;
     background-color: #e6e6e6;
 }
+
+@media (max-width: 768px){
+    header #branding, header nav, header nav li, #newsletter h1, #newsletter form, #boxes .box, article#main-col, aside#sidebar{
+        float: none;
+        text-align: center;
+        width: 100%;
+    }
+
+    header{
+        padding-bottom: 20px;
+    }
+
+    #showcase h1{
+        margin: 30px 0;
+    }
+
+    #showcase p{
+        margin-bottom: 4rem;
+    }
+
+    #newsletter button, .quote button{
+        display: block;
+        width: 100%;
+    }
+
+    #newsletter form input[type="email"], .quote input, .quote textarea{
+        width: 100%;
+        margin-bottom: 5px;
+    }
+}
