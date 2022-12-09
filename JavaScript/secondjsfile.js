@@ -17,8 +17,8 @@
  * 20 -> "Simplified"
  */
 
-const slogan = `I'm Loving It`;
+const str = `Hello World`;
 
-for (let i = 0; i < slogan.length; i++){
-    console.log(slogan[i]);
+for (let i = 0; i < str.length; i++){
+    console.log(str[i]);
 }
