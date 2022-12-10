@@ -1,6 +1,5 @@
-let cash = 20;
-let price = 40;
-let isStoreOpen = true;
+function returnToFahrenheit(celsius){
+    return celsius * 1.8 + 32;
+}
 
-let str = (cash >= price && isStoreOpen ? `Print receipt` : `Do not print`)
-console.log(str)
+console.log(returnToFahrenheit(24));
