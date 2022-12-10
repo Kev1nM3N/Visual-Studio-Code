@@ -17,8 +17,8 @@
  * 20 -> "Simplified"
  */
 
-const str = `Hello World`;
+const str = `Welcome to Earth`
 
-for (let i = 0; i < str.length; i++){
+for (i = 0; i < str.length; i++){
     console.log(str[i]);
 }
