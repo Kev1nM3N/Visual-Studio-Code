@@ -1,5 +1,14 @@
-function returnToFahrenheit(celsius){
-    return celsius * 1.8 + 32;
+let cash = 38;
+let price = 40;
+
+if (cash > price){
+    console.log(`You paid extra, here is ${cash - price} of change.`)
 }
 
-console.log(returnToFahrenheit(24));
+else if(cash === price){
+    console.log(`You paid exact. Have a nice day.`)
+}
+
+else{
+    console.log(`You still owe ${price - cash} of money.`)
+}
