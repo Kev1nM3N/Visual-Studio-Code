@@ -1,14 +1,5 @@
-let cash = 38;
-let price = 40;
+let grades = [`A+`, `A`, `FAIL`]
 
-if (cash > price){
-    console.log(`You paid extra, here is ${cash - price} of change.`)
-}
+let goodGrades = grades.filter(element => element !== `FAIL`)
 
-else if(cash === price){
-    console.log(`You paid exact. Have a nice day.`)
-}
-
-else{
-    console.log(`You still owe ${price - cash} of money.`)
-}
+console.log(goodGrades);

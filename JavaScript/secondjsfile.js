@@ -17,8 +17,7 @@
  * 20 -> "Simplified"
  */
 
-const str = `Welcome to Earth`
+const str = `Frontend Simplifed`;
 
-for (i = 0; i < str.length; i++){
-    console.log(str[i]);
-}
+for (i = 0; i < str.length; i++)
+console.log(str[i])
