@@ -1,5 +1,10 @@
-let grades = [`A+`, `A`, `FAIL`]
+let dollars = [1, 5, 10, 3];
 
-let goodGrades = grades.filter(element => element !== `FAIL`)
+let cents = [];
 
-console.log(goodGrades);
+for (let i = 0; i < dollars.length; i++){
+    cents.push(dollars[i] * 100)  
+
+}
+
+console.log(cents);
