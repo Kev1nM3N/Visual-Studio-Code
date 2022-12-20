@@ -5,14 +5,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="./secondjsfile.js"></script>
+    <script src="./secondjsfile.js" defer></script>
     <style>
-        body{
+        *{
+            transition: all 300ms ease;
+        }
+
+        .dark-theme{
             background-color: gray;
+            color: white;
         }
     </style>
 </head>
 <body>
-    <h1>Learning Loops in JavaScript!</h1>
+    <h1 id="title">Learning the DOM in JavaScript!</h1>
+    <h2 id="subtitle">Lorem ipsum dolor sit amet consectetur.</h2>
+    <p class="gotem">Lorem ipsum dolor sit amet consectetur adipisicing.
+    </p>
+
+    <button onclick="toggleDarkMode()">Click Me</button>
 </body>
 </html>
