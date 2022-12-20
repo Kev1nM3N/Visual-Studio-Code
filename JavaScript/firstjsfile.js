@@ -1,9 +1,9 @@
-let user = [ 
+let users = [ 
     {
         username: `BeastMuffin`,
         subscriptionStatus: `VIP+`,
-        password: `test123`,
         email: `mendez.kevin44@yahoo.com`,
+        password: `test123`,
         discordID: `BeastyMuffinMan`,
         lessonsCompleted: [0, 1, 2, 3, 4]
     },
@@ -11,11 +11,12 @@ let user = [
     {
         username: `Mitri`,
         subscriptionStatus: `VIP`,
-        password: `mitri2345`,
         email: `something@gmail.com`,
+        password: `ellothere`,
         discordID: `Fire`,
         lessonsCompleted: [0, 1, 2]
     },
+
     {
         username: `Zen`,
         subscriptionStatus: `VIP`,
@@ -24,23 +25,40 @@ let user = [
         discordID: `water`,
         lessonsCompleted: [0, 1]
     }
-];
+]
 
 function login(email, password){
-    for(let i = 0; i < user.length; i++){
-        if (user[i].email === email){
-            console.log(user[i])
-            if (user[i].password === password){
-                console.log(`User is logged in!`)
+    for (let i = 0; i < users.length; i++){
+        if (users[i].email === email){
+            console.log(users[i])
+            if (users[i].password === password){
+                console.log(`Log the user in`)
             }
 
             else{
-                console.log(`Pasword is incorrect. try again`)
+                console.log(`password is incorrect`)
             }
             return
         }
+
     }
-    console.log(`Could not find an email that matches`)
+    console.log(`Could not find an Email that matches.`)
 }
 
-login(`something@gmail.com`, `mitri2345`);
+login(`mendez.kevin44@yahoo.com`, `test123`);
+
+
+function register(user){
+    users.push(user)
+}
+
+register({
+    username: `Tails`,
+    email: `mediaman501@gmail.com`,
+    password: `mitir123`,
+    subscriptionStatus: `VIP+`,
+    discordID: `zen#0001`,
+    lessonsCompleted: [0, 1]
+})
+
+console.log(users);
