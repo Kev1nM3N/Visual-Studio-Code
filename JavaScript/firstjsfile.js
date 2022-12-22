@@ -54,11 +54,11 @@ function register(user){
 
 register({
     username: `Tails`,
-    email: `mediaman501@gmail.com`,
-    password: `mitir123`,
-    subscriptionStatus: `VIP+`,
-    discordID: `zen#0001`,
-    lessonsCompleted: [0, 1]
+    subscriptionStatus: `VIP`,
+    email: `mediaman502@aol.com`,
+    password: `mitri123`,
+    discordID: `Zen#0001`,
+    subscriptionStatus: [0, 1, 2]
 })
 
 console.log(users);
