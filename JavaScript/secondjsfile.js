@@ -6,17 +6,6 @@ document.querySelector(`.gotem`).innerHTML += ` Hello my brother`
 
 document.querySelector(`.gotem`).style.color = `blue`
 
-let age = 9;
-let accompanied = true;
+document.getElementById(`subtitle`).style.fontSize = `40px`
 
-if (age >= 13){
-    console.log(`Let him in`)
-}
-
-else if (age <= 12 && accompanied){
-    console.log (`Let them in`)
-}
-
-else{
-    console.log(`Cannot enter`)
-}
+document.getElementById(`box-1`).innerHTML = `Nevermind!`

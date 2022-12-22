@@ -49,16 +49,17 @@ login(`mendez.kevin44@yahoo.com`, `test123`);
 
 
 function register(user){
-    users.push(user)
+    users.push(user);
 }
 
 register({
-    username: `Tails`,
-    subscriptionStatus: `VIP`,
-    email: `mediaman502@aol.com`,
-    password: `mitri123`,
-    discordID: `Zen#0001`,
-    subscriptionStatus: [0, 1, 2]
+    username: `Foxtrot`,
+    subscriptionStatus: `jaelrgblaie`,
+    password: `sergl`,
+    email: `slghesli`,
+    discordID: `Water`,
+    lessonsCompleted: [0, 1, 2, 3]
+
 })
 
-console.log(users);
+console.log(users)
