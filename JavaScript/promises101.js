@@ -2,11 +2,11 @@
 
 // fetch("https://jsonplaceholder.typicode.com/users/1")
 //   .then((response) => {                  //We fetch the data, use the .then to ask for data, call it response
-//     return response.json();              //This entire thing is now response.json()
+//     return response.json();              //This entire thing is now a promise/response.json()
 //   })
-//   .then((data) => {
-//     console.log(data);
-//     emailRef.innerHTML = data.email
+//   .then((data) => {                      //When the whole thing is a promise, we use .then to fetch the info called data.
+//     console.log(data);                   //We can see it
+//     emailRef.innerHTML = data.email     
 //   });
 
 // async function main(){
@@ -18,3 +18,13 @@
 
 // main()
 
+const emailRef = document.querySelector(`.email`);
+
+async function main(){
+    const response = await fetch(`https://jsonplaceholder.typicode.com/users/1`);
+    const data = await response.json()
+    console.log(data)
+    emailRef.innerHTML = data.email
+}
+
+main()
