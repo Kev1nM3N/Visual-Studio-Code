@@ -53,12 +53,12 @@ function register(user){
 }
 
 register({
-    username: `Tails`,
-    subscriptionStatus: `VIP+`,
-    password: `TailSan`,
-    email: `whatever@whatever.com`,
-    discordID: `Air#0001`,
-    lessonsCompleted: [0, 1, 2]
+    username: `TAILS`,
+    subscriptionStatus: `TAILS`,
+    password: `TAILS`,
+    email: `somTAILSm`,
+    discordID: `TAILS`,
+    lessonsCompleted: [0]
 })
 
-console.log(users)
+console.log(users);
