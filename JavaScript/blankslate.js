@@ -1,10 +1,5 @@
-// function ageSecondsInput(age){
-//     let secondsInAHour = 60 * 60;
-//     let secondsInADay = secondsInAHour * 24
-//     let secondsInAYear = secondsInADay * 365
-//     let secondsLived = secondsInAYear * age
-//     return secondsLived
-// }
+function isOdd(num1){
+    return num1 % 2 === 0
+}
 
-// console.log(ageSecondsInput(26));
-
+console.log(isOdd(5));
