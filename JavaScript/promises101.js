@@ -1,17 +1,17 @@
 // const emailRef = document.querySelector(`.email`); //We select which element to use in HTML
 
-// fetch("https://jsonplaceholder.typicode.com/users/1")  (timestamp: 10:30)
-//   .then((response) => {                  //We fetch the data, use the .then to collect for data, call it response
-//     return response.json();              //This entire thing is now a promise/response.json()
+// fetch("https://jsonplaceholder.typicode.com/users/1")  fetch is a promise.
+//   .then((response) => {                  //We fetch the data, use the .then to collect for data, call it response. .then is a callback. its a function passed as a argument to another function.
+//     return response.json();              //This entire thing is now another promise/response.json(). json converts the backend data into frontend data.
 //   })
-//   .then((data) => {                      //When the whole thing is a promise, we use .then to fetch the info called data.
+//   .then((data) => {                      //When the whole thing is a promise, we use .then to unlock the info we called data.
 //     console.log(data);                   //The info was ready, David just wanted to show what it looked like.
 //     emailRef.innerHTML = data.email     
 //   });
 
 // async function main(){
 //     const response = await fetch("https://jsonplaceholder.typicode.com/users/1")     //await automatically returns the response for us.
-//     const data = await response.json()       //Right now, its gibberish data. To make frontend understand this, we add .json()
+//     const data = await response.json()       //Right now, its gibberish data. To make frontend understand this, we add .json()  await returns whats inside of the promise
 //     console.log(data);
 //     emailRef.innerHTML = data.email;
 // }
