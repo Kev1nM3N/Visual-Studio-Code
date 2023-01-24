@@ -1,13 +1,8 @@
-function sortHighToLow(numbers){
-    return numbers.sort((a, b) => b.price - a.price);
+async function main(blank){
+    const response = await fetch (`https://jsonplaceholder.typicode.com/posts`);
+    const data = await response.json()
+    const info = data.filter(element => element.userId === blank)
+    console.log(info)
 }
 
-console.log(
-    sortHighToLow([
-        {id: 1, price: 50},
-        {id: 2, price: 30},
-        {id: 3, price: 60},
-        {id: 4, price: 10},
-
-    ])
-);
+main(4)
