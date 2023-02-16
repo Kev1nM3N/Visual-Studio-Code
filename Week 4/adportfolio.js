@@ -1,16 +1,29 @@
-function video (seconds){
-    let timerMinutes = Math.floor(seconds / 60)
-    let timerSeconds = seconds % 60
+// template_57i7q9q
+// service_jrkdgnb
+// zB9fmdo_XchCWnTVO (public key or user id)
 
-    if (timerMinutes.toString().length === 1){
-        timerMinutes = `0` + timerMinutes
-    }
+function contact(event) {
+  event.preventDefault();
+  const loading = document.querySelector(`.modal__overlay--loading`);
+  const success = document.querySelector(`.modal__overlay--success`);
+  loading.classList += ` modal__overlay--visible`;
 
-    if (timerSeconds.toString().length === 1){
-        timerSeconds = `0` + timerSeconds
-    }
-
-    return timerMinutes + `:` + timerSeconds
+  emailjs
+    .sendForm(
+      `service_jrkdgnb`,
+      `template_57i7q9q`,
+      event.target,
+      `zB9fmdo_XchCWnTVO`
+    )
+    .then(() => {
+      loading.classList.remove(`modal__overlay--visible`);
+      success.classList += ` modal__overlay--visible`;
+      console.log(`It worked! Yaay!`);
+    })
+    .catch(() => {
+      loading.classList.remove(`modal__overlay--visible`);
+      alert(
+        `The email service is temporaily unavailable. Please contact me at mendez.kevin44@yahoo.com`
+      );
+    });
 }
-
-console.log(video(300))

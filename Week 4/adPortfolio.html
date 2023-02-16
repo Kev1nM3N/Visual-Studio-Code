@@ -8,6 +8,12 @@
     <link rel="stylesheet" href="./adPortfolio.css">
     <script src="https://kit.fontawesome.com/3fa994a8ab.js" crossorigin="anonymous"></script>
     <script src="./adportfolio.js" defer></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function(){
+        emailjs.init("zB9fmdo_XchCWnTVO");
+        })();
+    </script>
 </head>
 
 <body>
@@ -110,18 +116,18 @@
                 <h4 class="modal__sub-title modal__sub-title--contact">
                     I'm currently open to new opportunites! 
                 </h4>
-                <form id="contact__form" action="">
+                <form id="contact__form" onsubmit="contact(event)">
                     <div class="form__item">
                         <label class="form__item--label" for="name">Name</label>
-                        <input class="input" name="user_name" type="text" required></input>
+                        <input class="input" name="user_name" type="text" ></input>
                     </div>
                     <div class="form__item">
                         <label class="form__item--label" for="email">Email</label>
-                        <input class="input" name="user_email" type="email" required></input>
+                        <input class="input" name="user_email" type="email" ></input>
                     </div>
                     <div class="form__item">
                         <label class="form__item--label" for="message">Message</label>
-                        <textarea class="input" type="text" required></textarea>
+                        <textarea class="input" name= "user_message" type="text" required></textarea>
                     </div>
                     <button id="contact__submit" class="form__submit">
                         Send it my way
