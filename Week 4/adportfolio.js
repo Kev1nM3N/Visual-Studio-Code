@@ -2,6 +2,18 @@
 // service_jrkdgnb
 // zB9fmdo_XchCWnTVO (public key or user id)
 
+let contrastToggle = false
+
+function toggleContrast(){
+  contrastToggle = !contrastToggle
+  if (contrastToggle){
+    document.body.classList += " dark-theme"
+  }
+  else{
+    document.body.classList.remove("dark-theme")
+  }
+}
+
 function contact(event) {
   event.preventDefault();
   const loading = document.querySelector(`.modal__overlay--loading`);
@@ -26,4 +38,15 @@ function contact(event) {
         `The email service is temporaily unavailable. Please contact me at mendez.kevin44@yahoo.com`
       );
     });
+}
+
+let isModalOpen = false
+
+function toggleModal(){
+  if (isModalOpen){
+    isModalOpen = false;
+    return document.body.classList.remove(`modal--open`);
+  }
+  isModalOpen = true
+  document.body.classList += ` modal--open`;
 }
