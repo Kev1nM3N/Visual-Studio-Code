@@ -3,6 +3,19 @@
 // zB9fmdo_XchCWnTVO (public key or user id)
 
 let contrastToggle = false
+const scaleFactor = 1 / 20;
+
+function moveBackground(event){
+  const shapes = document.querySelectorAll(`.shape`)
+  const x = event.clientX * scaleFactor;
+  const y = event.clientY * scaleFactor;
+
+  for (let i = 0; i < shapes.length; i++){
+    const isOdd = i % 2 !== 0;
+    const booleanInt = isOdd ? -1 : 1
+    shapes[i].style.transform = `translate(${x * booleanInt}px, ${y * booleanInt}px)`
+  }
+}
 
 function toggleContrast(){
   contrastToggle = !contrastToggle
