@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Shantell+Sans:wght@400;500;700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Shantell Sans', cursive, sans-serif;
+}
+
+#showcase {
+    position: absolute;
+    right: 0;
+    width: 100%;
+    min-height: 100vh;
+    padding: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #242424;
+    color: #fff;
+    z-index: 2;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px 100px;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.toggle {
+    position: relative;
+}
+
+.toggle.active{
+    background: url("./NewPictures/black-square-close-x-button-icon-3163191536344jbn3p5wa.png");
+    background-repeat: no-repeat;
+    background-size: 25px;
+    background-position: center;
+}
+
+.fa-solid, .fa-bars {
+    font-size: 40px;
+    cursor: pointer;
+}
