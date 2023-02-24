@@ -16,7 +16,7 @@
             <div class="toggle"><i class="fa-solid fa-bars"></i></div>
         </header>
 
-        <!--<video src="./New Pictures/pexels-roman-odintsov-6016144.mp4" muted loop autoplay></video>-->
+        <video src="./NewPictures/pexels-roman-odintsov-6016144.mp4" muted loop autoplay></video>
 
         <div class="overlay"></div>
 
@@ -28,13 +28,15 @@
         </div>
 
         <ul class="social">
-            <li><i class="fa-brands fa-square-facebook"></i></li>
-            <li><i class="fa-brands fa-twitter"></i></li>
-            <li><i class="fa-brands fa-instagram"></i></li>
+            <li><a href="#"><i class="fa-brands fa-square-facebook"></i></a></li>
+            <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+            <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
         </ul>
     </section>
 
     <div class="menu">
+        <i class="fa-solid fa-xmark"></i>
+
         <ul>
             <li><a href="#">Home</a></li>
             <li><a href="#">News</a></li>
@@ -43,5 +45,15 @@
             <li><a href="#">Blog</a></li>
         </ul>
     </div>
+
+    <script>
+        const menuToggle = document.querySelector(`.toggle`)
+        const showcase = document.getElementById(`showcase`)
+
+        menuToggle.addEventListener(`click`, () => {
+            menuToggle.classList.toggle(`active`)
+            showcase.classList.toggle(`active`)
+        })
+    </script>
 </body>
 </html>
