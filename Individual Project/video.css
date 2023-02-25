@@ -239,4 +239,9 @@ video {
     .text {
         text-align: center;
     }
+
+    .social {
+        left: 50%;
+        right: 50%;
+    }
 }
