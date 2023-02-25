@@ -208,4 +208,35 @@ video {
     .text h3 {
         font-size: 2em
     }
+
+    .copyright {
+        font-size: 0.8em;
+    }
+}
+
+@media (max-width: 600px) {
+    .copyright {
+        display: none;
+    }
+}
+
+@media (max-width: 500px) {
+    header {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 404px) {
+    .logo {
+        text-align: center;
+    }
+
+    .toggle {
+        margin-top: 12px;
+    }
+
+    .text {
+        text-align: center;
+    }
 }
