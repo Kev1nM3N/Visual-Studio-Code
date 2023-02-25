@@ -8,11 +8,19 @@
     <link rel="shortcut icon" href="./NewPictures/cute-kawaii-pink-flower-icons-cute-kawaii-pink-flower-icons-vector-illustration-167237381.jpg">
     <link rel="stylesheet" href="./video.css">
     <script src="https://kit.fontawesome.com/3fa994a8ab.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
-<body>
-    <section id="showcase">
+<body >
+    <script>
+        AOS.init();
+      </script>
+    <section id="showcase" data-aos="zoom-in">
         <header>
-            <h2 class="logo">Find your floral needs here!</h2>
+            <div class="small-container">
+                <h2 class="logo">Floral Co.</h2> 
+                <img src="./NewPictures/a3ef8f4d9808108d598dea46385ed48c-rose-flower-icon.png" alt="">
+            </div>
             <div class="toggle"><i class="fa-solid fa-bars"></i></div>
         </header>
 
@@ -21,9 +29,9 @@
         <div class="overlay"></div>
 
         <div class="text">
-            <h2>Never Stop</h2>
-            <h3>Exploring the world</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim earum autem ex nisi neque. Recusandae expedita vitae suscipit mollitia. Exercitationem.</p>
+            <h2>Beauty</h2>
+            <h3>Starts Here</h3>
+            <p>Your library of rental flowers is here. Take advantage of our spring sale!</p>
             <a href="#">Explore Now</a>
         </div>
 
@@ -32,8 +40,11 @@
             <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
             <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
         </ul>
+        
+        <p class="copyright">Copyright &copy; 2023 All rights reserved</p>
     </section>
-
+    
+    
     <div class="menu">
         <i class="fa-solid fa-xmark"></i>
 
@@ -49,9 +60,15 @@
     <script>
         const menuToggle = document.querySelector(`.toggle`)
         const showcase = document.getElementById(`showcase`)
+        const closeMenu = document.querySelector(`.fa-xmark`)
 
         menuToggle.addEventListener(`click`, () => {
             menuToggle.classList.toggle(`active`)
+            showcase.classList.toggle(`active`)
+        })
+
+        closeMenu.addEventListener(`click`, () => {
+            closeMenu.classList.toggle(`active`)
             showcase.classList.toggle(`active`)
         })
     </script>
