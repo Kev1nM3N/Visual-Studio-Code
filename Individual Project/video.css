@@ -171,6 +171,10 @@ video {
     background-color: #d4d6d6;
 }
 
+.menu.active ~ .fa-bars {
+    display: none;
+  }
+
 .fa-xmark {
     position: absolute;
     top: 36px;
