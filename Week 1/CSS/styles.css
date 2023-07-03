@@ -1,12 +1,16 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+.nav__link {
+    color: violet;
 }
 
-div {
-    width: 100%;
-    max-width: 600px;
-    background-color: gray;
-    text-align: center;
+.nav__link--active {
+    font-weight: bold;
+    color: red;
+}
+
+.nav__link:active {
+    color: blue;
+}
+
+.nav__link--active:active {
+    color: purple;
 }
