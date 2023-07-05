@@ -7,3 +7,61 @@
     font-family: 'Roboto', sans-serif;
 }
 
+a {
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+h1 {
+    font-size: 72px;
+}
+
+button {
+    background-color: #05c7cf;
+    color: white;
+    border: none;
+    border-radius: 2px;
+    padding: 8px 16px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+nav {
+    padding: 0 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #cafdff;
+    height: 70px;
+}
+
+.logo-image {
+    width: 300px;
+}
+
+.link {
+    margin: 0 8px;
+}
+
+header {
+    background-color: #eadcff;
+    height: calc(100vh - 70px);
+    padding: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sub-header {
+    font-size: 32px;
+    margin: 16px 0 24px 0;
+}
+
+.wrapper {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
