@@ -131,6 +131,7 @@ form {
     display: flex;
     flex-direction: column;
     margin: auto;
+    padding: 0 24px;
 }
 
 input, textarea {
@@ -149,7 +150,7 @@ footer {
 }
 
 .footer__logo--wrapper {
-    width: 40%;
+    width: 60%;
 }
 
 .footer__links {
@@ -158,4 +159,66 @@ footer {
 
 .footer__link {
     margin: 0 16px;
+}
+
+
+/*
+
+Ends Here
+
+*/
+
+@media (max-width: 728px){
+    body {
+        overflow-x: hidden;
+    }
+
+    .wrapper {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 42px;
+    }
+
+    .sub-header {
+        font-size: 24px;
+    }
+
+    header figure {
+        width: 60%;
+        margin-top: 16px;
+    }
+
+    nav figure {
+        margin: auto;
+    }
+
+    .links a {
+        display: none;
+    }
+
+    .about__description {
+        flex-direction: column;
+    }
+
+    .para-wrapper {
+        width: 90%;
+    }
+
+    .about__img--wrapper {
+        width: 90%;
+        margin-bottom: 30px;
+    }
+
+    .footer__logo--wrapper {
+        width: 75%;
+    }
+}
+
+@media (max-width: 490px){
+    .footer__link {
+        margin: 0 4px;
+    }
 }
