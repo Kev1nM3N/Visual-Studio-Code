@@ -31,6 +31,11 @@ a {
     position: relative;
 }
 
+i:hover {
+    opacity: 0.7;
+    transition: all 300ms ease;
+}
+
 .link__hover-effect:before {
     content: "";
     position: absolute;
@@ -145,24 +150,57 @@ about me
     overflow: hidden;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
     margin-bottom: 20px;
+    animation: animate-pfp 800ms 200ms backwards;
+}
+
+@keyframes animate-pfp {
+    0% {
+        transform: scale(0);
+    }
+
+    80% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
 }
 
 .about-me__picture {
     width: 100%;
 }
 
+.about-me__info--title {
+    margin-bottom: 14px;
+    animation: fade-up 650ms 400ms backwards;
+}
+
 .about-me__info--para {
     font-size: 20px;
     margin: 0 24px 28px 24px;
+    animation: fade-up 650ms 600ms backwards;
 }
 
-.about-me__info--title {
-    margin-bottom: 14px;
+.about-me__links {
+    animation: fade-up 650ms 800ms backwards;
 }
 
 .about-me__link {
     font-size: 20px;
     padding: 0 16px;
+}
+
+@keyframes fade-up {
+    0% {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .about-me__img--container {
@@ -175,6 +213,36 @@ about me
 
 .about-me__img {
     width: 90%;
+    animation: fade-up 1100ms 1000ms backwards;
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.wave {  /*YOU CANNOT ANIMATE INLINE ELEMENTS. SO WE USE INLINE:BLOCK T0 FIX THIS*/
+    display: inline-block;
+    animation: animate-wave 500ms infinite ease-in-out;
+}
+
+@keyframes animate-wave {
+    0% {
+        transform: rotate(0);
+    }
+
+    50% {
+        transform: rotate(40deg);
+    }
+
+    100% {
+        transform: rotate(0);
+    }
 }
 
 /*
