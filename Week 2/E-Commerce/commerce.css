@@ -7,9 +7,21 @@
     font-family: 'Roboto', sans-serif;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden;
+}
+
 nav {
     height: 80px;
     display: flex;
+}
+
+a {
+    text-decoration: none;
 }
 
 p {
@@ -17,15 +29,15 @@ p {
 }
 
 h1 {
-    font-size: 50px;
+    font-size: 56px;
     color: #7342b6;
-    margin-bottom: 24px;
+    margin: 24px 0;
 }
 
 h2 {
     text-align: center;
-    font-size: 30px;
-    margin-bottom: 22px;
+    font-size: 34px;
+    margin-bottom: 26px;
 }
 
 button {
@@ -112,6 +124,72 @@ li {
     background-color: #7342b6;
 }
 
+.btn__menu {
+    background-color: transparent;
+    font-size: 40px;
+    text-align: center;
+    border: none;
+    color: #7342b6;    
+    display: none;
+}
+
+.menu__backdrop {
+    position: absolute;
+    background-color: #242424;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 100;
+    justify-content: center;
+    align-items: center;
+    transition: all 300ms ease;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.menu--open {
+    overflow-y: hidden;
+}
+
+.menu--open .menu__backdrop { 
+    display: flex;
+    visibility: visible;
+    opacity: 1;
+}
+
+.menu__links {
+    display: flex;
+    flex-direction: column;
+}
+
+.menu__list {
+    padding: 32px 0;
+}
+
+.menu__link {
+    color: #f8f8f8;
+    font-size: 36px;
+}
+
+.menu__link:hover {
+    text-decoration: underline;
+}
+
+.btn__menu--close {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    padding: 8px;
+    color: #f8f8f8;
+}
+
+/*
+
+LANDING PAGE
+
+*/
+
 #landing {
     background-color: rgba(115, 66, 214, 0.1);
 }
@@ -121,7 +199,7 @@ header {
 }
 
 .header__description {
-    padding: 0 20px;
+    padding: 0 24px;
 }
 
 .header__container {
@@ -153,6 +231,10 @@ header {
 .header__img--wrapper {
     padding: 20px 20px 0 20px;
     z-index: 50;
+}
+
+.no-cursor {
+    cursor: no-drop;
 }
 
 
@@ -206,14 +288,17 @@ HIGHLIGHTS
 
 .highlight__wrapper {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .highlight {
     padding: 0 24px;
-    width: calc(100% / 3);
+    width: 100%;
+    max-width: 280px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    margin-bottom: 26px;
     align-items: center;
 }
 
@@ -232,21 +317,172 @@ HIGHLIGHTS
     justify-content: center;
     border-radius: 4px;
     font-size: 32px;
-    margin-bottom: 24px;
+    margin-bottom: 18px;
 }
 
 .highlight__subtitle {
     font-size: 20px;
     margin-bottom: 8px;
+    text-align: center;
 }
 
 /*
 
-FEATURED BOOKS  39:28
+FEATURED BOOKS
 
 */
 
 #features {
-    height: 1000px;
+    padding-top: 8vw;
     background-color: rgba(115, 66, 214, 0.1);
+}
+
+.books {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.book__img {
+    transition: all 300ms ease;
+    max-height: 380px;
+    cursor: no-drop;
+}
+
+.book {
+    width: 25%;
+    padding: 24px;
+}
+
+.book__img--wrapper {
+    margin-bottom: 8px;
+    border-radius: 4px;
+    overflow: hidden;
+    display: flex;
+}
+
+.book:hover .book__img {
+    transform: scale(1.03);
+}
+
+.book__title {
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.book__title:hover {
+    text-decoration: underline;
+    cursor: no-drop;
+}
+
+.book__ratings {
+    margin-bottom: 8px;
+    color: #fabf2a;
+}
+
+.book__price--normal {
+    text-decoration: line-through;
+    padding-right: 6px;
+    color: #bfbfbf;
+}
+
+/* 
+
+End
+
+*/
+
+#explore {
+    text-align: center;
+    background-color: rgba(115, 66, 214, 0.1);
+}
+
+footer {
+    background-color: #242424;
+    text-align: center;
+}
+
+.footer__logo {
+    display: flex;
+    justify-content: center;
+}
+
+.footer__logo--img {
+    width: 160px;
+    filter: grayscale(1) invert(1);
+}
+
+.footer__link,
+.footer__copyright {
+    color: #f8f8f8;
+}
+
+.footer__list {
+    margin: 20px 0 24px 0;
+}
+
+.footer__link {
+    padding: 0 8px;
+}
+
+.footer__link:hover {
+    text-decoration: underline;
+}
+
+/*
+
+SMALL PHONES, LARGE TABLETS, LARGE SMARTPHONES
+
+*/
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 48px;
+    }
+
+    h2 {
+        font-size: 28px;
+    }
+
+    .btn {
+        font-size: 18px;
+    }
+
+    .book {
+        width: 50%;
+    }
+}
+
+
+@media (max-width: 550px){
+    h1 {
+        font-size: 40px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    .highlight__subtitle {
+        margin: 0;
+    }
+
+    .highlight__img {
+        margin-bottom: 16px;
+    }
+
+    .highlight {
+        margin-bottom: 30px;
+    }
+
+    .btn {
+        font-size: 16px;
+    }
+
+    .nav__links {
+        display: none;
+    }
+
+    .btn__menu {
+        display: block;
+    }
 }
