@@ -12,7 +12,10 @@ html {
 }
 
 h1 {
-    color: #243e63
+    color: #243e63;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 60px;
 }
 
 .purple {
@@ -20,7 +23,7 @@ h1 {
 }
 
 .nav__container {
-    padding: 2rem 0;
+    padding: 2rem;
 }
 
 .row {
@@ -34,6 +37,7 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: relative;
 }
 
 .nav__logo {
@@ -74,21 +78,119 @@ nav {
 .nav__link--primary {
     color: #F7FAFC;
     background-color: #6415FF;
-    padding: 12px 32px;
+    padding: 10px 32px;
     border-radius: 999px;
     transition: all 300ms ease;
 }
 
-.nav__link--primary:hover {
+.nav__link--primary:hover,
+.get__started:hover {
     background-color: rgba(80 17 204);
     text-decoration: none;
     color: #F7FAFC;
+    cursor: pointer;
+}
+
+.btn__menu {
+    background-color: transparent;
+    border: none;
+    font-size: 1.5rem;
+    transition: all 300ms ease;
+    position: absolute;
+    right: 0;
+    display: none;
+}
+
+.btn__menu:hover {
+    color: #6415FF;
+}
+
+/*
+
+Landing Page
+
+*/
+
+.container {
+    padding: 0 2rem;
+}
+
+.landing__page {
+    display: flex;
+}
+
+.left-side {
+    width: 40%;
+}
+
+.email__signup {
+    position: relative;
 }
 
 .welcome__para {
-    
+    font-size: 18px;
+    line-height: 27px;
+    color: #243e63;
+}
+
+.search__bar {
+    padding: 1.25rem 11rem 1.25rem 2rem;
+    border-radius: 99px;
+    width: 100%;
+    border: 2px solid #e2e8f0;
+    color: #243e63;
+    font-size: 17px;
+    font-weight: 500;
+    transition: all 300ms ease;
+}
+
+.search__bar:hover {
+    border-color: rgb(160 174 192);
+}
+
+.search__bar:focus,
+.search__bar:focus-visible,
+.search__bar:focus-within,
+.search__bar:active,
+.search__bar:target {
+    border-color: rgb(100, 21, 255);
+}
+
+
+.search__bar::placeholder {
+    color: #e2e8f0;
+}
+
+.get__started {
+    position: absolute;
+    right: 8px;
+    top: 7px;
+    color: #F7FAFC;
+    background-color: #6415FF;
+    padding: 14px 32px;
+    font-weight: 700;
+    font-size: 16px;
+    width: 10rem;
+    border-radius: 999px;
+    border: none;
+    transition: all 300ms ease;
+}
+
+
+.right-side {
+    width: 60%;
+}
+
+.right-sideimg {
+    width: 100%;
 }
 
 @media (max-width: 950px) {
+    .nav__links {
+        display: none;
+    }
 
+    .btn__menu {
+        display: block;
+    }
 }
