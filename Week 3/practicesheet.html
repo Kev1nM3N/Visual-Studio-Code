@@ -6,14 +6,63 @@
     <title>Javascript Practice</title>
     <script src="./practice.js" defer></script>
     <style>
-        .theme{
-            background-color: brown;
+
+        /* body {
+            height: 97.5vh;
+        } */
+
+        h1 {
+            font-size: 36px;
+        }
+
+        section {
+            height: 97.5vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        input {
+            width: 100%;
+            max-width: 20rem;
+            padding: 0.5rem 2rem;
+            text-align: center;
+            border-color: blue;
+            color: rgb(46, 42, 42);
+        }
+
+        input:hover {
+            border-color: turquoise;
+        }
+
+        input:focus {
+            border-color: red;
+            outline: 0;
+        }
+
+        button {
+            margin: 12px 0;
+            padding: 1rem 8rem;
+            background-color: blueviolet;
+            border-radius: 999px;
+            border: none;
+            color: #f8f8f8;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: rgb(142, 65, 213);
+            transform: translateY(6px);
         }
     </style>
 </head>
 <body>
-    <h1>Hello World</h1>
-    <button onclick="main()">Click Here</button>
-    <button onclick="toggleDark()">Dark Mode</button>
+    <section>
+        <h1>Testing Out This Input</h1>
+        <input type="email" name="" id="welcome" placeholder="Your E-Mail Here">
+        <button class="btn">Submit</button>
+    </section>
 </body>
 </html>
