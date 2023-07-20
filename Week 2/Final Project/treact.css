@@ -102,6 +102,10 @@ nav {
     cursor: pointer;
 }
 
+button {
+    cursor: pointer;
+}
+
 .btn__menu {
     background-color: transparent;
     border: none;
@@ -474,16 +478,103 @@ PRICING PLANS PAGE
 .plans {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
 }
 
 .plan {
-    padding: 0.5rem 2rem;
-    margin: 3rem 2rem;
+    margin-right: 2rem;
+    margin-top: 4rem;
     text-align: center;
     width: 100%;
     max-width: 24rem;
-    border: 2px solid red;
+    border-radius: 0.5rem;
+    outline: 1px solid rgb(226, 232, 240);
+}
+
+hr {
+    width: 100%;
+}
+
+.plan1 {
+    border-top: 8px solid;
+    border-top-color: rgb(56, 178, 172);
+}
+
+.plan2 {
+    padding-top: 8px;
+    background: linear-gradient(135deg, rgb(76, 81, 191) 0%, rgb(102, 126, 234) 100%);
+    color: rgb(247 250 252);
+}
+
+.plan3 {
+    border-top: 8px solid;
+    border-top-color: rgb(245, 101, 101);
+}
+
+.plan__heading {
+    padding: 2rem 0;
+    line-height: 1.625;
+}
+
+.plan__title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    letter-spacing: 0.025em;
+}
+
+.plan__details {
+    color: rgb(113 128 150);
+    margin-top: 1.25rem;
+    font-weight: 500;
+}
+
+.plan__details2 {
+    color: rgb(247 250 252);
+}
+
+.gradient__btn {
+    width: 70%;
+    border-radius: 9999px;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #F7FAFC;
+    font-weight: 700;
+    border: none;
+    transition: all 300ms ease;
+}
+
+.gradient__btn:hover {
+    transform: translate(2px, -2px);
+    box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1), 0 10px 10px -5px rgba(0,0,0,0.04);
+}
+
+
+.gradient__btn0 {
+    background: linear-gradient(115deg, rgb(56, 178, 172) 0%, rgb(129, 230, 217) 100%);
+}
+
+.gradient__btn1 {
+    background-color: rgb(247, 250, 252);
+    color: rgb(100, 21, 255);
+}
+
+.gradient__btn1:hover {
+    color: rgb(70 15 179);
+    background-color: rgb(226 232 240);
+}
+
+.gradient__btn2 {
+    background: linear-gradient(115deg, rgb(245, 101, 101) 0%, rgb(254, 178, 178) 100%);
+}
+
+.plan__body {
+    padding: 2rem;
+}
+
+.button__wrapper {
+    padding: 2rem 1rem;
 }
 
 h3 {
@@ -501,10 +592,94 @@ h3 {
 .plan__monthly {
     font-weight: 700;
     letter-spacing: 0.1em;
+    color: rgb(160 174 192);
+}
+
+.plan2 .plan__monthly {
     color: rgb(237 242 247);
 }
 
+/*
+
+TESTIMONIAL PAGE
+
+*/
+
+
+.testimonial__wrapper {
+    display: flex;
+}
+
+
+.testimonial__leftside {
+    width: 40%;
+    display: flex;
+    align-items: center;
+}
+
+.testimonial__rightside {
+    width: 60%;
+    padding-left: 4rem;
+}
+
+h4 {
+    margin-top: 1rem;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #243e63;
+}
+
+.blockquote {
+    margin-bottom: 2.5rem;
+    margin-top: 1rem;
+    font-weight: 500;
+    line-height: 1.625;
+    color: rgb(74 85 104);
+}
+
+.two__columnuser {
+    display: flex;
+}
+
+h5 {
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+.two__columnuser--info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 1.5rem;
+}
+
+.two__columnuser--bio {
+    font-weight: 500;
+    color: rgb(124 139 161);
+}
+
+.pfp__wrapper {
+    width: 5rem;
+    display: flex;
+    align-items: center;
+}
+
+.pfp {
+    width: 100%;
+    border-radius: 99px;
+}
+
+
+
+
+@media (max-width: 989px) {
+    .plans {
+        flex-wrap: wrap;
+    }
+}
+
 @media (max-width: 950px) {
+
     .service {
         flex-basis: calc(50% - 1rem); /* Two in a row when screen size is reduced */
     }
