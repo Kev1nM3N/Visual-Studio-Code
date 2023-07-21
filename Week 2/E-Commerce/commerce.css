@@ -425,7 +425,8 @@ footer {
 }
 
 .footer__link:hover {
-    text-decoration: underline;
+    text-decoration: underline 2px; /*You can edit thickness with pixels*/
+    text-underline-offset: 5px;
 }
 
 /*

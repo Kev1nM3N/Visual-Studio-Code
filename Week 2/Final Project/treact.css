@@ -132,6 +132,7 @@ Landing Page
 
 .container {
     padding: 0 2rem;
+    height: 100%;
 }
 
 .landing__page {
@@ -232,7 +233,7 @@ THE FEATURES PAGE
 */
 
 section {
-    height: 100vh;
+    min-height: 100vh;
 }
 
 .services__heading {
@@ -336,7 +337,7 @@ QUALITY WORK PAGE
     top: 7px;
     color: #F7FAFC;
     background-color: #6415FF;
-    padding: 14px 32px;
+    padding: 12px 32px;
     margin-top: 2rem;
     font-weight: 700;
     font-size: 16px;
@@ -605,6 +606,13 @@ TESTIMONIAL PAGE
 
 */
 
+#testimonials {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 8rem;
+}
+
 
 .testimonial__wrapper {
     display: flex;
@@ -612,14 +620,22 @@ TESTIMONIAL PAGE
 
 
 .testimonial__leftside {
-    width: 40%;
+    width: 50%;
     display: flex;
     align-items: center;
 }
 
 .testimonial__rightside {
-    width: 60%;
+    width: 50%;
     padding-left: 4rem;
+}
+
+.testimonial__rightside h1 {
+    margin-top: 1rem;
+}
+
+.testimonial__experience {
+    margin-top: 2rem;
 }
 
 h4 {
@@ -642,8 +658,9 @@ h4 {
 }
 
 h5 {
-    font-size: 1.25rem;
+    font-size: 2rem;
     font-weight: 700;
+    color: #F7FAFC;
 }
 
 .two__columnuser--info {
@@ -669,7 +686,191 @@ h5 {
     border-radius: 99px;
 }
 
+.testimonial__slideshow {
+    display: flex;
+    justify-content: space-between;
+}
 
+.arrow__direction {
+    border-radius: 9999px;
+    background-color: rgb(237 242 247);
+    padding: 0.75rem 1rem;
+    margin: 0 0.75rem;
+    transition: all 300ms ease;
+    cursor: no-drop;
+}
+
+.arrow__direction:hover {
+    background-color: rgb(226 232 240);
+    color: rgb(80 17 204);
+}
+
+.arrow__keys {
+    display: flex;
+    align-items: center;
+}
+
+.arrow__keys div {
+    margin-top: 0.75rem;
+    margin-bottom: 0.75rem;
+    height: 1.5rem;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(226, 232, 240);
+}
+
+/*
+
+TWO BUTTON SECTION
+
+*/
+
+#short__section {
+    display: flex;
+    align-items: center;
+}
+
+.short__section--text {
+    width: 50%;
+}
+
+.short__section--container {
+    padding: 7rem 0;
+    max-width: 1280px;
+    background-color: rgb(100 21 255);
+    border-radius: 6px;
+}
+
+.short__section--display {
+    z-index: 10;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.alpha__buttons {
+    padding: 1.25rem 2.5rem;
+    font-size: 1rem;
+    font-weight: 700;
+    color: rgb(247 250 252);
+    border-radius: 99px;
+}
+
+.start {
+    background-color: rgb(245 101 101);
+    border: none;
+    box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1),0 4px 6px -2px rgba(0,0,0,0.05);
+    margin-right: 2rem;
+    transition: all 300ms ease;
+}
+
+.start:hover {
+    background-color: rgb(229 62 62);
+}
+
+.contact {
+    background-color: transparent;
+    border-color: rgb(160 174 192);
+    transition: all 300ms ease;
+}
+
+.contact:hover {
+    background-color: rgb(247 250 252);
+    color: rgb(100 21 255);
+}
+
+/*
+
+FOOTER
+
+*/
+
+footer {
+    background-color: rgb(100 21 255);
+}
+
+.footer__container {
+    padding: 6rem 3rem;
+}
+
+.footer__links {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer__list {
+    list-style-type: none;
+}
+
+.footer__list li {
+    margin-top: 0.75rem;
+}
+
+.footer__link {
+    text-decoration: none;
+    color: #F7FAFC;
+    transition: all 300ms ease;
+    font-size: 14px;
+}
+
+.footer__link:hover {
+    text-decoration: underline 1.6px;
+    text-underline-offset: 6px;
+}
+
+.footer__title {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    margin-bottom: 1.5rem;
+}
+
+.divider {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    width: 100%;
+    border-color: rgb(116 44 255);
+    border-style: solid;
+    border-width: 1px;
+}
+
+.footer__rights {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #F7FAFC;
+}
+
+.rights__reserved {
+    color: #cbd5e0;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.footer__rights--links {
+    color: black;
+}
+
+.footer__rights--link {
+    padding: 0.4rem 0.8rem;
+    background-color: rgb(247 250 252);
+    margin-right: 1rem;
+    cursor: pointer;
+    border-radius: 999px;
+    transition: all 300ms ease;
+}
+
+.new__link1 {
+    padding: 0.4rem 0.6rem;
+}
+
+.footer__rights--link:hover {
+    background-color: rgb(203 213 224);
+}
+
+.footer__rights .nav__logo:hover {
+    color: none;
+}
 
 
 @media (max-width: 989px) {
