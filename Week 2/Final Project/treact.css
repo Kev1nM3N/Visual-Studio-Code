@@ -29,6 +29,10 @@ h2 {
     color: #6415FF;
 }
 
+header {
+    margin-bottom: 11rem;
+}
+
 .nav__container {
     padding: 2rem;
 }
@@ -37,10 +41,6 @@ h2 {
     width: 100%;
     max-width: 1200px;
     margin: auto;
-}
-
-header {
-    height: 100vh;
 }
 
 nav {
@@ -132,7 +132,6 @@ Landing Page
 
 .container {
     padding: 0 2rem;
-    height: 100%;
 }
 
 .landing__page {
@@ -728,6 +727,7 @@ TWO BUTTON SECTION
 #short__section {
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 .short__section--text {
@@ -868,21 +868,53 @@ footer {
     background-color: rgb(203 213 224);
 }
 
-.footer__rights .nav__logo:hover {
-    color: none;
+footer .nav__logo:hover {
+    color: #F7FAFC;
 }
 
+/*
 
-@media (max-width: 989px) {
-    .plans {
-        flex-wrap: wrap;
+LARGE AND SMALL MOBILE DEVICES
+
+*/
+
+
+
+@media (max-width:1200px) {
+    .welcome__title {
+        font-size: 36px;
+        line-height: 45px;
+    }
+
+    .welcome__para {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    header .get__started {
+        right: 3.2rem;
+    }
+
+    header .landing__page .right-side {
+        justify-content: flex-end;
+    }
+
+    .right-sideimg {
+        width: 80%;
     }
 }
 
-@media (max-width: 950px) {
+@media (max-width: 1122px){
+    header .get__started {
+        top: 8px;
+        right: 3rem;
+    }
+}
 
-    .service {
-        flex-basis: calc(50% - 1rem); /* Two in a row when screen size is reduced */
+@media (max-width: 1100px) {
+
+    header {
+        margin-bottom: 5rem;
     }
 
     .nav__links {
@@ -891,5 +923,116 @@ footer {
 
     .btn__menu {
         display: block;
+    }
+
+    .welcome__title {
+        font-size: 1.875rem;
+    }
+
+    .welcome__para {
+        margin-top: 1.25rem;
+        margin-bottom: 1.25rem;
+        font-size: 1rem;
+    }
+
+    header .landing__page {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 6rem 0;
+    }
+
+    header .left-side {
+        width: 100%;
+        max-width: 32rem;
+    }
+
+    header .get__started {
+        right: 2rem;
+    }
+
+    header .logoshow {
+        margin-top: 3rem;
+    }
+
+    header .logotitle {
+        font-size: 0.875rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+    }
+
+    header .logoblock {
+        width: 100%;
+    }
+
+    header .landing__page .right-side {
+        margin-top: 3rem;
+    }
+
+    .right-sideimg {
+        width: 100%;
+    }
+}
+
+
+@media (max-width: 989px) {
+    .plans {
+        flex-wrap: wrap;
+    }
+
+}
+
+@media (max-width: 950px) {
+    .service {
+        flex-basis: calc(50% - 1rem); /* Two in a row when screen size is reduced */
+    }
+    
+}
+
+@media (max-width: 800px) {
+    #service__page .features__para {
+        font-size: 16px;
+    }
+
+    .service {
+        flex-basis: calc(75% - 1rem);
+    }
+
+    #quality__section {
+        margin: 5rem 0;
+    }
+
+    .qualitywork__heading {
+        flex-direction: column-reverse;
+        align-items: center;
+        padding: 5rem 0;
+    }
+
+    .quality__right {
+        width: 100%;
+        max-width: 28rem;
+    }
+
+    #quality__section .quality__left {
+        margin-right: 0;
+    }
+
+    .quality__left {
+        margin-top: 2rem;
+        text-align: center;
+        width: 60%;
+    }
+
+    .quality__left h1 {
+        font-size: 2.25rem;
+        line-height: 1.125;
+    }
+
+    .quality__left .features__para {
+        font-size: 0.875rem;
+        font-weight: 500;
+        line-height: 1.625;
     }
 }
