@@ -155,6 +155,7 @@ Landing Page
     line-height: 27px;
     color: #243e63;
     margin: 2rem 0;
+    width: 95%;
 }
 
 .search__bar {
@@ -185,7 +186,7 @@ Landing Page
 .get__started {
     position: absolute;
     right: 3.4rem;
-    top: 7px;
+    top: 8px;
     color: #F7FAFC;
     background-color: #6415FF;
     padding: 14px 32px;
@@ -233,6 +234,11 @@ THE FEATURES PAGE
 
 section {
     min-height: 100vh;
+    margin: 4rem 0;
+}
+
+#service__page {
+    margin-bottom: 0;
 }
 
 .services__heading {
@@ -249,6 +255,9 @@ section {
     line-height: 29px;
     color: #7c8ba1;
     margin-top: 16px;
+    max-width: 550px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .services {
@@ -306,6 +315,7 @@ QUALITY WORK PAGE
     display: flex;
     align-items: center;
     justify-content: center;
+    margin: 0;
 }
 
 .qualitywork__heading {
@@ -369,7 +379,7 @@ STEPS SECTION
 }
 
 #steps .quality__right {
-    margin-left: 4rem;
+    margin-left: 2rem;
 }
 
 .laptoppic {
@@ -471,8 +481,15 @@ PRICING PLANS PAGE
 
 */
 
+
 .text__wrapper {
     text-align: center;
+}
+
+.text__wrapper p {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .plans {
@@ -481,8 +498,7 @@ PRICING PLANS PAGE
 }
 
 .plan {
-    margin-right: 2rem;
-    margin-top: 4rem;
+    margin: 3rem 1rem;
     text-align: center;
     width: 100%;
     max-width: 24rem;
@@ -974,12 +990,83 @@ LARGE AND SMALL MOBILE DEVICES
     .right-sideimg {
         width: 100%;
     }
+
+
+    .quality__right h1 {
+        font-size: 2.25rem;
+        text-align: center;
+    }
+
+    .quality__right h2 {
+        text-align: center;
+    }
+}
+
+@media (max-width: 1020px) {
+    .values__heading .quality__left h1 {
+        font-size: 2.25rem;
+        line-height: 1.25;
+    }
+
+    .values__heading .quality__left .features__para {
+        font-size: 1rem;
+    }
+
+    .values__box {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .values__mini2 {
+        margin-top: 2.5rem;
+    }
+
+    .values__box p {
+        font-size: 16px;
+        width: 80%;
+    }
+
 }
 
 
 @media (max-width: 989px) {
+
     .plans {
         flex-wrap: wrap;
+    }
+
+    .short__section--display {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .short__section--container {
+        padding: 5rem 0;
+    }
+
+    .short__section--text {
+        width: 80%;
+    }
+
+    .short__section--buttons {
+        margin-top: 2rem;
+    }
+
+    .testimonial__leftside {
+        width: 40%;
+    }
+
+    .testimonial__rightside {
+        width: 60%;
+    }
+
+    .testimonial__rightside h1 {
+        font-size: 2.25rem;
+    }
+
+    .testimonial__rightside .features__para {
+        font-size: 1rem;
     }
 
 }
@@ -987,6 +1074,11 @@ LARGE AND SMALL MOBILE DEVICES
 @media (max-width: 950px) {
     .service {
         flex-basis: calc(50% - 1rem); /* Two in a row when screen size is reduced */
+    }
+
+    .qualitywork__heading .quality__left h1 {
+        font-size: 2.25rem;
+        line-height: 1.25;
     }
     
 }
@@ -1002,6 +1094,14 @@ LARGE AND SMALL MOBILE DEVICES
 
     .service {
         flex-basis: calc(75% - 1rem);
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+
+    .text__container {
+        margin-left: 0;
+        max-width: 330px;
     }
 
     .qualitywork__heading {
@@ -1101,6 +1201,10 @@ LARGE AND SMALL MOBILE DEVICES
         font-size: 1rem;
     }
 
+    #testimonials {
+        margin-top: 2rem;
+    }
+
     .testimonial__wrapper {
         flex-direction: column;
         align-items: center;
@@ -1144,19 +1248,11 @@ LARGE AND SMALL MOBILE DEVICES
         padding: 5rem 0;
     }
 
-    .short__section--display {
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-    }
 
     .short__section--text {
         width: 80%;
     }
 
-    .short__section--buttons {
-        margin-top: 2rem;
-    }
 
     /*
 
@@ -1190,4 +1286,161 @@ LARGE AND SMALL MOBILE DEVICES
     .footer__rights--links {
         margin-top: 2rem;
     }
+}
+
+@media (max-width: 630px) {
+
+    .welcome__title {
+        font-size: 2rem;
+    }
+
+    .email__signup {
+        position: static;
+    }
+
+    .search__bar {
+        padding: 1.25rem 2rem 1.25rem 2rem;
+        text-align: center;
+    }
+
+    header .right-side {
+        width: 90%;
+    }
+
+    .get__started {
+        position: static;
+        margin-top: 1rem;
+        width: 90%;
+        padding: 18px 32px;
+    }
+
+    .quality__left {
+        width: 80%;
+    }
+
+    .quality__left h1 {
+        font-size: 1.875rem;
+    }
+
+    #service__page .features__para {
+        line-height: 1.625;
+    }
+
+    .values__mini1 .text__align span {
+        padding: 8px 14px;
+    }
+
+    .text__wrapper h1 {
+        font-size: 36px;
+    }
+
+    .text__wrapper p {
+        font-size: 0.965rem;
+        font-weight: 500;
+    }
+
+    .testimonial__slideshow,
+    .two__columnuser {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .two__columnuser--info {
+        margin-left: 0;
+        margin-top: 0.7rem;
+    }
+
+    .arrow__keys {
+        margin-top: 1rem;
+    }
+
+    .short__section--text h5 {
+        font-size: 1.5rem;
+    }
+
+    .short__section--text {
+        width: 90%;
+    }
+
+    .short__section--buttons {
+        display: flex;
+        flex-direction: column;
+        margin-top: 1.5rem;
+    }
+
+    .alpha__buttons {
+        padding: 1rem 2rem;
+        font-size: 0.875rem;
+        font-weight: 700;
+        letter-spacing: 0.025em;
+    }
+
+    .start {
+        margin-right: 0;
+    }
+
+    .contact {
+        margin-top: 1rem;
+    }
+
+    footer .nav__logo a{
+        display: flex;
+        align-items: center;
+    }
+}
+
+@media (max-width: 500px) {
+
+    .container {
+        padding: 0 1rem;
+    }
+
+    .services__heading h1 {
+        font-size: 2.25rem;
+        line-height: 50px;
+    }
+
+    #service__page .services__heading .features__para {
+        font-size: 0.875rem;
+        max-width: 380px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    header .welcome__title {
+        line-height: 1.25;
+    }
+
+    .testimonial__rightside h1 {
+        font-size: 1.875rem;
+    }
+
+    .testimonial__rightside .features__para {
+        font-size: 0.875rem;
+    }
+
+    .testimonial__leftside {
+        width: 90%;
+    }
+
+    .testimonial__rightside h1 {
+        margin-top: 0;
+    }
+
+    .blockquote {
+        margin-bottom: 1.5rem;
+    }
+
+    .values__box p {
+        margin-top: 1rem;
+    }
+
+    .rights__reserved {
+        margin-top: 2rem;
+    }
+
+    .footer__rights--links {
+        margin-top: 2.5rem;
+    }
+
 }
