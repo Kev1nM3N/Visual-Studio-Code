@@ -7,10 +7,11 @@
     <link rel="icon" href="./images/logo.2c489fc453a1783cbadacf914efa3df6.svg">
     <link rel="stylesheet" href="./treact.css">
     <script src="https://kit.fontawesome.com/3fa994a8ab.js" crossorigin="anonymous"></script>
-
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="./treact.js" defer></script>
 </head>
 <body>
-    <header>
+    <header data-aos="slide-right">
         <div class="nav__container">
             <div class="row">
                 <nav>
@@ -27,22 +28,24 @@
                         <li><a href="" class="nav__link">Login</a></li>
                         <li><a href="" class="nav__link nav__link--primary">Sign Up</a></li>
                     </ul>
+
                     <button onclick="openMenu()" class="btn__menu">
                         <i class="fas fa-bars"></i>
                     </button>
-                    <!--<div class="menu__backdrop">
+
+                    <div class="menu__backdrop">
                         <button onclick="closeMenu()" class="btn__menu btn__menu--close">
                             <i class="fas fa-times"></i>
                         </button>
                         <ul class="menu__links">
                             <li><a href="" class="nav__link" onclick="closeMenu()">About</a></li>
                             <li><a href="" class="nav__link" onclick="closeMenu()">Blog</a></li>
-                            <li><a href="" class="nav__link no-cursor" onclick="closeMenu()">Pricing</a></li>
-                            <li><a href="" class="nav__link no-cursor" onclick="closeMenu()">Contact Us</a></li>
-                            <li><a href="" class="nav__link no-cursor" onclick="closeMenu()">Login</a></li>
-                            <li><a href="" class="nav__link no-cursor" onclick="closeMenu()">Sign Up</a></li>
+                            <li><a href="" class="nav__link" onclick="closeMenu()">Pricing</a></li>
+                            <li><a href="" class="nav__link" onclick="closeMenu()">Contact Us</a></li>
+                            <li><a href="" class="nav__link" onclick="closeMenu()">Login</a></li>
+                            <li><a href="" class="nav__link nav__link--primary" onclick="closeMenu()">Sign Up</a></li>
                         </ul>
-                    </div> -->
+                    </div>
                 </nav>
             </div>
         </div>
@@ -71,7 +74,7 @@
         </div>
     </header>
 
-    <section id="service__page">
+    <section id="service__page" data-aos="slide-left">
         <div class="container">
             <div class="row">
                 <div class="services__heading">
@@ -152,7 +155,7 @@
         </div>
     </section>
 
-    <section id="quality__section">
+    <section id="quality__section" data-aos="slide-right">
         <div class="container">
             <div class="row">
                 <div class="qualitywork__heading">
@@ -173,7 +176,7 @@
         </div>
     </section>
 
-    <section id="steps">
+    <section id="steps" data-aos="slide-left">
         <div class="container">
             <div class="row">
                 <div class="steps__heading">
@@ -227,7 +230,7 @@
         </div>
     </section>
 
-    <section id="values__page">
+    <section id="values__page" data-aos="slide-right">
         <div class="container">
             <div class="row">
                 <div class="values__heading">
@@ -267,7 +270,7 @@
         </div>
     </section>
 
-    <section id="pricing__plans">
+    <section id="pricing__plans" data-aos="slide-left">
         <div class="container">
             <div class="row">
                 <div class="pricing__wrapper">
@@ -343,7 +346,7 @@
         </div>
     </section>
 
-    <section id="testimonials">
+    <section id="testimonials" data-aos="slide-right">
         <div class="container">
             <div class="row">
                 <div class="testimonial__wrapper">
@@ -399,7 +402,7 @@
         </div>
     </section>
 
-    <section id="short__section">
+    <section id="short__section" data-aos="slide-right">
         <div class="container">
             <div class="row">
                 <div class="short__section--container">
@@ -418,7 +421,7 @@
         </div>
     </section>
 
-    <footer>
+    <footer data-aos="slide-left">
         <div class="footer__container">
             <div class="row">
                 <div class="footer__info">
@@ -480,5 +483,9 @@
             </div>
         </div>
     </footer>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+      </script>
 </body>
 </html>
