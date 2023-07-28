@@ -15,8 +15,13 @@ input {
     max-width: 20rem;
     padding: 0.5rem 2rem;
     text-align: center;
-    border-color: blue;
-    color: rgb(46, 42, 42);
+    border: 2px solid blue;
+    color: black;
+    font-weight: bold;
+}
+
+input::placeholder {
+    font-weight: 500;
 }
 
 input:hover {
