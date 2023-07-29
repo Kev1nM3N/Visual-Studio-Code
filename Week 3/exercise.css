@@ -2,8 +2,19 @@ h1 {
     font-size: 36px;
 }
 
-section {
+.dark-theme {
+    background-color: darkblue;
+}
+
+body {
     height: 97.5vh;
+    display: flex;
+    align-items: center;
+}
+
+section {
+    width: 100%;
+    height: 60vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
