@@ -1,6 +1,7 @@
 let isModalOpen = false
 let contrastToggle = false
 const scaleFactor = 1 / 20;
+// restartAnimation.addEventListener(`click`, restartAnimation, false)
 
 function moveBackground(event) {
   const shapes = document.querySelectorAll(".shape");
@@ -13,6 +14,16 @@ function moveBackground(event) {
     shapes[i].style.transform = `translate(${x * boolInt}px, ${y * boolInt}px) rotate(${x * boolInt * 10}deg)`
   }
 }
+
+function replayAnimation (event){
+    let restartAnimation = document.querySelector(`.wave`);
+    restartAnimation.style.animationName = "none"
+
+    requestAnimationFrame(() => {
+        restartAnimation.style.animationName = `animate-wave`;
+    })
+}
+
 
 function toggleContrast (){
     contrastToggle = !contrastToggle

@@ -30,6 +30,7 @@ input, textarea {
     width: 100%;
     background-color: #242424;
     color: white;
+    font-size: 20px;
     outline: none;
     border: 3px solid #c0c4cc;
     border-top: none;
@@ -40,7 +41,7 @@ input, textarea {
 }
 
 textarea {
-    resize: vertical; /* THIS MAKES IT SO THE TEXT AREA DOESNT HAVE WEIRD PROPOTIONS WHEN RESIZING*/
+    resize: vertical;
     height: 100px;
     margin-top: 8px;
 }
@@ -64,6 +65,26 @@ input:focus, textarea:focus {
     margin-bottom: 12px;
     text-align: left;
     line-height: 1;
+}
+
+.wave {  /*YOU CANNOT ANIMATE INLINE ELEMENTS. SO WE USE INLINE:BLOCK T0 FIX THIS*/
+    display: inline-block;
+    animation: animate-wave 500ms 6 ease-in-out;
+    cursor: pointer;
+}
+
+@keyframes animate-wave {
+    0% {
+        transform: rotate(0);
+    }
+
+    50% {
+        transform: rotate(45deg);
+    }
+
+    100% {
+        transform: rotate(0);
+    }
 }
 
 .container {
@@ -147,12 +168,20 @@ header {
     color: aqua;
 }
 
+.dark-theme .red__default {
+    color: red;
+}
+
 .dark-theme .social__link {
     background-color: darkred;
 }
 
 .dark-theme #personal-logo {
     filter: invert(1);
+}
+
+.dark-theme #personal-img {
+    border: 2px solid #f8f8f8;
 }
 
 .dark-theme section {
@@ -183,6 +212,18 @@ LANDING PAGE
     min-height: 100vh;
 }
 
+@keyframes fade-up {
+    0% {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 section {
     background-color: rgb(245, 245, 245);
     transition: all 300ms ease;
@@ -196,6 +237,10 @@ header {
     width: 100%;
     max-width: 1000px;
     padding: 0 30px;
+}
+
+.header__content {
+    animation: fade-up 650ms 400ms backwards;
 }
 
 .header__para {
@@ -262,6 +307,7 @@ header {
 }
 
 .scroll__icon {
+    cursor: no-drop;
     width: 20px;
     height: 30px;
     border: 2px solid #242424;
@@ -398,11 +444,12 @@ MODAL PAGE
 }
 
 .form__submit {
-    background-color: #f06449;
-    border: 2px solid #f06449;
+    background-color: red;
+    border: 2px solid red;
+    border-radius: 99px;
     color: #f8f8f8;
     font-weight: bold;
-    max-width: 240px;
+    max-width: 200px;
     width: 100%;
     padding: 12px 24px;
     font-size: 20px;
@@ -415,8 +462,8 @@ MODAL PAGE
 }
 
 .form__submit:active {
-    border-color: #f06449;
-    color: #f06449;
+    border-color: red;
+    color: red;
 }
 
 .modal__overlay {
@@ -487,10 +534,37 @@ nav {
     margin: auto;
     height: 100px;
     padding: 0 22px;
+    animation: fade-up 650ms 200ms backwards;
 }
 
 #personal-logo {
-    width: 120px;
+    width: 130px;
+}
+
+#personal-img {
+    width: 70px;
+    border-radius: 99px;
+    border: 2px solid #1c1d15;
+    animation: animate-pfp 800ms 200ms backwards;
+    transition: all 300ms ease;
+}
+
+#personal-img:hover {
+    scale: 1.1;
+}
+
+@keyframes animate-pfp {
+    0% {
+        transform: scale(0);
+    }
+
+    80% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
 }
 
 .nav__link--list {
@@ -607,6 +681,24 @@ footer {
     align-items: center;
 }
 
+.footer__anchor {
+    position: relative;
+}
+
+.footer__anchor:hover .top {
+    opacity: 1;
+    transform: translateX(6rem);
+}
+
+.top {
+    position: absolute;
+    right: 0;
+    bottom: 2.5rem;
+    transition: all 300ms ease;
+    z-index: 1;
+    opacity: 0;
+}
+
 .footer__logo--img {
     width: 180px;
     filter: invert(1);
@@ -643,7 +735,7 @@ footer {
     left: 5vw;
   }
   .shape--1 {
-    top: 20vh;
+    top: 22vh;
     left: 50vw;
   }
   .shape--2 {

@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kevin Mendez</title>
-    <link rel="shortcut icon" href="./assets/result_311393.jpeg">
+    <title>Advanced Portfolio</title>
+    <link rel="shortcut icon" href="./assets/icons8-monitor-16.png">
     <link rel="stylesheet" href="./AdPortfolio.css">
     <script src="https://kit.fontawesome.com/3fa994a8ab.js" crossorigin="anonymous"></script>
     <script src="Adportfoilio.js"></script>
@@ -24,6 +24,11 @@
             <figure>
                 <img id="personal-logo" src="./assets/New KD Design Logo/KD-left-transparent-svg.svg" alt="">
             </figure>
+
+            <figure>
+                <img src="./assets/result_311393.jpeg" alt="" id="personal-img">
+            </figure>
+
             <ul class="nav__link--list">
                 <li class="nav__link">
                     <a href="#projects" class="
@@ -50,7 +55,7 @@
 
         <header>
             <div class="header__content">
-                <h1 class="title">Hey</h1>
+                <h1 class="title">Hi! <span class="wave" onclick="replayAnimation()">👋🏻</span></h1>
                 <h1 class="title title--secondary"><span class="red">I'm Kevin</span></h1>
                 <p class="header__para">
                     I'm a <span class="red">Frontend Software Engineer</span> with a strong passion for building
@@ -76,19 +81,19 @@
             </button>
         </a>
 
-        <a href="" class="scroll">
+        <a href="javascript:void(0)" class="scroll">
             <div class="scroll__icon click"></div>
         </a>
         <div class="modal">
             <div class="modal__half modal__about">
-                <h3 class="modal__title modal__title--about">Here's a bit about me</h3>
-                <h4 class="modal__sub-title modal__sub-title--about">Frontend Software Engineer</h4>
+                <h3 class="modal__title modal__title--about">Kevin Mendez</h3>
+                <h4 class="modal__sub-title modal__sub-title--about">Frontend Software Engineer 👨‍💻</h4>
                 <p class="modal__para">
-                    I'm a 26 year-old American <span class="red">Software Engineer</span> with a strong passion for developing websites with
-                    great <span class="red">user experiences.</span>
+                    I'm a 26 year-old American <span class="red red__default">Software Engineer</span> with a strong passion for developing websites with
+                    great <span class="red red__default">user experiences.</span>
                     <br>
                     I currently work on extremely difficult engineering problems and learn from a team consisting of some of the most
-                    <span class="red">talented</span> and <span class="red">experienced</span> software engineers everyday.
+                    <span class="red red__default">talented</span> and <span class="red red__default">experienced</span> software engineers everyday.
                 </p>
                 <div class="modal__languages">
                     <figure class="modal__language">
@@ -111,8 +116,8 @@
             </div>
             <div class="modal__half modal__contact">
                 <i class="fas fa-times modal__exit click" onclick="toggleModal()"></i>
-                <h3 class="modal__title modal__title--contact">Let's have a chat!</h3>
-                <h4 class="modal__sub-title modal__sub-title--contact">I'm currently open to new opportunites!</h4>
+                <h3 class="modal__title modal__title--contact">Let's Chat! 👨🏻‍💼</h3>
+                <h4 class="modal__sub-title modal__sub-title--contact">I'm Currently Open To New Opportunities</h4>
                 <form onsubmit="contact(event)" id="contact__form">
                     <div class="form__item">
                         <label class="form__item--label">Name</label>
@@ -126,7 +131,7 @@
                         <label class="form__item--label">Message</label>
                         <textarea type="text" name="user_message" class="input"></textarea>
                     </div>
-                    <button id="contact__submit" class="form__submit">Send it my way</button>
+                    <button class="form__submit">Send</button>
                 </form>
                 <div class="modal__overlay modal__overlay--loading">
                     <i class="fas fa-spinner"></i>
@@ -150,7 +155,7 @@
     <section id="projects">
         <div class="container">
             <div class="row">
-                <h1 class="section__title">Here are some of my <span class="red">projects.</span></h1>
+                <h1 class="section__title">Here are some of my <span class="red">projects</span> 🖥️</h1>
                 <ul class="project__list">
                     <li class="project">
                         <div class="project__wrapper">
@@ -228,6 +233,10 @@
                         </div>
                     </li>
                 </ul>
+                <h1 class="section__title">
+                    More <span class="red">projects</span> are in <span class="red">development</span>🧑‍💼
+                    <br>Come back soon!
+                </h1>
             </div>
         </div>
     </section>
@@ -235,11 +244,12 @@
     <footer>
         <div class="container">
             <div class="row footer__row">
-                <figure>
-                    <a href="#">
+                <a href="#" class="footer__anchor">
+                    <figure class="footer__logo--wrapper">
                         <img class="footer__logo--img" src="./assets/New KD Design Logo/KD-left-transparent-svg.svg" alt="">
-                    </a>
-                </figure>
+                    </figure>
+                    <span class="top" style="color: #f8f8f8;">Back to top <i class="fa-solid fa-arrow-up"></i></span>
+                </a>
                 <div class="footer__social--list">
                     <a href="https://github.com/Kev1nM3N" target="_blank" class="
                     footer__social--link
@@ -270,7 +280,7 @@
                         Resume
                     </a>
                 </div>
-                <div class="footer__copyright">Copyright &#169; 2023 Kevin Mendez</div>
+                <div class="footer__copyright">Copyright &#169; 2023 KD Design</div>
             </div>
         </div>
     </footer>
