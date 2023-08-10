@@ -58,7 +58,7 @@
               <h2 class="section__title books__header--title">
                 All <span class="purple">Books</span>
               </h2>
-              <select name="" id="filter">
+              <select name="" id="filter" onchange="filterBooks(event)">
                 <option value="" disabled selected>Sort</option>
                 <option value="Low_To_High">Price, Low To High</option>
                 <option value="High_To_Low">Price, High To Low</option>
@@ -67,7 +67,7 @@
             </div>
 
             <div class="books">
-              <!--5:50-->
+              <i class="fas fa-spinner books__loading--spinner"></i>
             </div>
           </div>
         </div>
