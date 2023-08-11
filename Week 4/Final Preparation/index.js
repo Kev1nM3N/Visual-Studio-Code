@@ -5,14 +5,13 @@ const userListElement = document.querySelector(`.user-list`);
 async function main (){
     const users = await fetch(`https://jsonplaceholder.typicode.com/users`)
     const usersData = await users.json();
-    console.log(usersData)
     userListElement.innerHTML = usersData.map((user) => userHTML(user)).join(``);
 }
 
 main()
 
 function showUserPosts(id) {
-    // console.log(window.location) 12:49 timestamp
+    localStorage.setItem(`apple`, id);
     window.location.href = `${window.location.origin}/Week%204/Final%20Preparation/user.html`
     console.log(id)
 }
