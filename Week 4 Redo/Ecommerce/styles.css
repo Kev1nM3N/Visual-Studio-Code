@@ -456,16 +456,8 @@ select {
   align-items: center;
   justify-content: center;
   padding-top: 60px;
-  font-size: 100px;
+  font-size: 60px;
   color: #7342d6;
-}
-
-.books__loading--spinner {
-  display: none;
-}
-
-.books__loading .books__loading--spinner {
-  display: none;
 }
 
 .fa-spinner {
