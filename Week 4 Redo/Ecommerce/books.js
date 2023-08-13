@@ -33,7 +33,7 @@ function getBooks() {
       url: "assets/book-1.jpeg",
       originalPrice: 44,
       salePrice: 19,
-      rating: 4.5,
+      rating: 3,
     },
     {
       id: 5,
@@ -73,7 +73,7 @@ function getBooks() {
       url: "assets/book-6.jpeg",
       originalPrice: 35,
       salePrice: null,
-      rating: 4,
+      rating: 2,
     },
     {
       id: 10,
@@ -81,7 +81,7 @@ function getBooks() {
       url: "assets/book-7.jpg",
       originalPrice: 40,
       salePrice: null,
-      rating: 4,
+      rating: 1,
     },
     {
       id: 11,
