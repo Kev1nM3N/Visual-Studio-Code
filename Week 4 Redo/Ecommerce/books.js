@@ -1,12 +1,14 @@
 
 
+
+
 // FAKE DATA
 function getBooks() {
   return [
     {
       id: 1,
       title: "Crack the Coding Interview",
-      url: "assets/crack the coding interview.png",
+                url: "assets/crack the coding interview.png",
       originalPrice: 49.95,
       salePrice: 14.95,
       rating: 4.5,
@@ -41,7 +43,7 @@ function getBooks() {
       url: "assets/book-2.jpeg",
       originalPrice: 32,
       salePrice: 17,
-      rating: 3.5,
+      rating: 4,
     },
     {
       id: 6,
@@ -65,7 +67,7 @@ function getBooks() {
       url: "assets/book-5.jpeg",
       originalPrice: 38,
       salePrice: 17.95,
-      rating: 4,
+      rating: 4.5,
     },
     {
       id: 9,
@@ -73,7 +75,7 @@ function getBooks() {
       url: "assets/book-6.jpeg",
       originalPrice: 35,
       salePrice: null,
-      rating: 2,
+      rating: 4,
     },
     {
       id: 10,
@@ -81,7 +83,7 @@ function getBooks() {
       url: "assets/book-7.jpg",
       originalPrice: 40,
       salePrice: null,
-      rating: 1,
+      rating: 4,
     },
     {
       id: 11,
