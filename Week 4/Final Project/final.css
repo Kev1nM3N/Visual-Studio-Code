@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;500;700;900&family=Roboto:wght@400;500;700;900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: roboto slab, roboto;
+}
+
+header {
+    width: 100%;
+    height: 120px;
+    outline: 2px solid red;
+}
+
+.container {
+    width: 100%;
+    max-width: 1300px;
+    margin: auto;
+    height: 100%;
+    outline: 2px solid blue;
+}
+
