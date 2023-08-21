@@ -10,7 +10,8 @@
 header {
     width: 100%;
     height: 120px;
-    outline: 2px solid red;
+    background-color: rgb(174, 45, 45);
+    border-bottom: 4px solid black;
 }
 
 .container {
@@ -18,6 +19,67 @@ header {
     max-width: 1300px;
     margin: auto;
     height: 100%;
-    outline: 2px solid blue;
+}
+
+.row {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo__info--container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 30%;
+    height: 100%;
+}
+
+.logo__img {
+    width: 100px;
+}
+
+.logo__heading {
+    font-size: 32px;
+}
+
+.links__list {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.list-item {
+    margin: 0 12px;
+}
+
+.link {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+/*
+                |
+MAIN PART       |
+                V
+*/
+
+main {
+    height: calc(100vh - 120px);
+    outline: 6px solid darkcyan;
+}
+
+#showcase {
+    height: 26vh;
+    outline: 3px solid darkviolet;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.showcase__title, .showcase__title--para, #showcase__searchbar {
+    margin: 12px 0;
 }
 
