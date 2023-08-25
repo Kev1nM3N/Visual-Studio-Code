@@ -52,7 +52,7 @@
             <h1 class="showcase__title">Browse Your Favorite Classics</h1>
             <h2 class="showcase__title--para">Enjoy a unlimited selection of movies and TV Shows</h2>
 
-            <input type="search" name="" id="showcase__searchbar" placeholder="Start Looking!">
+            <input type="search" name="" id="showcase__searchbar" placeholder="Start Looking!" onkeyup="movieSearch()">
             <button class="showcase__btn">Search</button>
         </section>
 
@@ -64,57 +64,22 @@
                             Trending Now
                         </h1>
 
-                        <select name="" id="filter">
+                        <select name="" id="filter" onchange="filterMovies(event)">
                             <option value="" disabled>Sort</option>
-                            <option value="Low_To_High">Price, Low To High</option>
-                            <option value="High_To_Low">Price, High To Low</option>
-                            <option value="RATING">Rating</option>
+                            <option value="Default">Null</option>
+                            <option value="New_to_Old">Newest To Oldest</option>
+                            <option value="Old_to_New">Oldest To Newest</option>
                         </select>
                     </div>
 
                     <div class="movies">
                         <!-- <i class="fas fa-spinner"></i> -->
-                        <div class="movie">
+                        <!-- <div class="movie">
                             <figure class="movie__wrapper--img">
                                 <img class="movie__img" src="https://upload.wikimedia.org/wikipedia/en/2/23/P5A_DVD_V01_cover.jpg" alt="">
                             </figure>
                             <h2 class="movie__title">Persona 5: The Animation</h2>
-                            <h3 class="movie__release-date">2018</h3>
-                        </div>
-                        <div class="movie">
-                            <figure class="movie__wrapper--img">
-                                <img class="movie__img" src="https://upload.wikimedia.org/wikipedia/en/2/23/P5A_DVD_V01_cover.jpg" alt="">
-                            </figure>
-                            <h2 class="movie__title">Persona 5: The Animation</h2>
-                            <h3 class="movie__release-date">2018</h3>
-                        </div>
-                        <div class="movie">
-                            <figure class="movie__wrapper--img">
-                                <img class="movie__img" src="https://upload.wikimedia.org/wikipedia/en/2/23/P5A_DVD_V01_cover.jpg" alt="">
-                            </figure>
-                            <h2 class="movie__title">Persona 5: The Animation</h2>
-                            <h3 class="movie__release-date">2018</h3>
-                        </div>
-                        <div class="movie">
-                            <figure class="movie__wrapper--img">
-                                <img class="movie__img" src="https://upload.wikimedia.org/wikipedia/en/2/23/P5A_DVD_V01_cover.jpg" alt="">
-                            </figure>
-                            <h2 class="movie__title">Persona 5: The Animation</h2>
-                            <h3 class="movie__release-date">2018</h3>
-                        </div>
-                        <div class="movie">
-                            <figure class="movie__wrapper--img">
-                                <img class="movie__img" src="https://upload.wikimedia.org/wikipedia/en/2/23/P5A_DVD_V01_cover.jpg" alt="">
-                            </figure>
-                            <h2 class="movie__title">Persona 5: The Animation</h2>
-                            <h3 class="movie__release-date">2018</h3>
-                        </div>
-                        <div class="movie">
-                            <figure class="movie__wrapper--img">
-                                <img class="movie__img" src="https://upload.wikimedia.org/wikipedia/en/2/23/P5A_DVD_V01_cover.jpg" alt="">
-                            </figure>
-                            <h2 class="movie__title">Persona 5: The Animation</h2>
-                            <h3 class="movie__release-date">2018</h3>
+                            <h3 class="movie__release-date">2018</h3> -->
                         </div>
                     </div>
                 </div>
