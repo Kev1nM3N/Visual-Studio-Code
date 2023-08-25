@@ -7,11 +7,14 @@
     font-family: roboto slab, roboto;
 }
 
+:root {
+    --background-color: rgb(174, 45, 45);
+}
+
 header {
     width: 100%;
     height: 120px;
-    background-color: rgb(174, 45, 45);
-    border-bottom: 4px solid black;
+    background-color: var(--background-color);
 }
 
 .container {
@@ -33,6 +36,7 @@ header {
     justify-content: space-between;
     width: 30%;
     height: 100%;
+    padding-left: 18px;
 }
 
 .logo__img {
@@ -41,6 +45,7 @@ header {
 
 .logo__heading {
     font-size: 32px;
+    color: #fff;
 }
 
 .links__list {
@@ -49,11 +54,11 @@ header {
     align-items: center;
 }
 
-.list-item {
+.list-item, .footer__link {
     margin: 0 12px;
 }
 
-.link {
+.link, .footer__link, .footer__copyright {
     color: white;
     text-decoration: none;
     font-size: 20px;
@@ -61,25 +66,167 @@ header {
 
 /*
                 |
-MAIN PART       |
+SHOWCASE INFO   |
                 V
 */
 
 main {
-    height: calc(100vh - 120px);
-    outline: 6px solid darkcyan;
+    height: 100%;
 }
 
 #showcase {
-    height: 26vh;
+    padding: 12px 0;
     outline: 3px solid darkviolet;
-    text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
 }
 
 .showcase__title, .showcase__title--para, #showcase__searchbar {
     margin: 12px 0;
 }
 
+.showcase__title {
+    font-size: 30px;
+}
+
+.showcase__title--para{
+    font-size: 20px;
+}
+
+#showcase__searchbar {
+    width: 30%;
+    height: 40px;
+    font-size: 20px;
+    border-radius: 99px;
+    border: 2px solid;
+    padding: 0 10px;
+}
+
+#showcase__searchbar::placeholder {
+    text-align: center;
+    font-size: 16px;
+}
+
+.showcase__btn {
+    padding: 0.5rem 5rem;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: all 300ms ease;
+    cursor: pointer;
+}
+
+.showcase__btn:hover {
+    background-color: var(--background-color);
+    color:#fff;
+}
+
+
+#showcase__searchbar:hover {
+    border: 2px solid aqua;
+}
+
+#showcase__searchbar:focus {
+    border-color: red;
+    outline: 0;
+}
+
+
+/*
+                |
+MAIN MOVIES     |
+                V
+*/
+
+#main__movies {
+    padding: 0 18px;
+    margin-bottom: 56px;
+}
+
+.row__movies {
+    display: block;
+}
+
+.movies__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 24px 0;
+}
+
+.movies__header--title {
+    font-size: 38px;
+}
+
+#filter {
+    padding: 0 24px;
+    height: fit-content;
+}
+
+.movies {
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.movie {
+    margin: 1.2rem;
+}
+
+.movie__title {
+    font-size: 20px;
+}
+
+.movie__release-date {
+    font-size: 16px;
+}
+
+.movie__wrapper--img {
+    max-width: 300px;
+}
+
+.movie__img {
+    width: 100%;
+}
+
+
+/*
+                |
+FOOTER          |
+                V
+*/
+
+
+footer {
+    background-color: var(--background-color);
+    text-align: center;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer__list {
+    margin: 12px 0;
+}
+
+
+/*
+                |
+MOBILE DEVICES  |
+                V
+*/
+
+
+@media (max-width: 983px) {
+    .movies {
+        justify-content: space-around;
+    }
+
+    #showcase__searchbar {
+        font-size: 14px;
+        padding: 0;
+    }
+}
