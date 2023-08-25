@@ -7,6 +7,7 @@
     <link rel="shortcut icon" href="./assets/movieicon.png">
     <link rel="stylesheet" href="./final.css">
     <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
+    <script src="./final.js" defer></script>
 </head>
 <body>
     <header>
@@ -27,6 +28,21 @@
                     <li class="list-item"><a href="" class="link">Movies</a></li>
                     <li class="list-item"><a href="" class="link">TV Shows</a></li>
                 </ul>
+
+                <button onclick="openMenu()" class="btn__menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+
+                <div class="menu__backdrop">
+                    <button onclick="closeMenu()" class="btn__menu btn__menu--close">
+                        <i class="fas fa-times"></i>
+                    </button>
+                    <ul class="menu__links">
+                        <li><a href="javascript:void(0)" class="link" onclick="closeMenu()">Home</a></li>
+                        <li><a href="javascript:void(0)" class="link" onclick="closeMenu()">Movies</a></li>
+                        <li><a href="javascript:void(0)" class="link" onclick="closeMenu()">TV Shows</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
     </header>
@@ -36,7 +52,7 @@
             <h1 class="showcase__title">Browse Your Favorite Classics</h1>
             <h2 class="showcase__title--para">Enjoy a unlimited selection of movies and TV Shows</h2>
 
-            <input type="search" name="" id="showcase__searchbar" placeholder="Find what your looking for here!">
+            <input type="search" name="" id="showcase__searchbar" placeholder="Start Looking!">
             <button class="showcase__btn">Search</button>
         </section>
 
@@ -86,6 +102,20 @@
                             <h2 class="movie__title">Persona 5: The Animation</h2>
                             <h3 class="movie__release-date">2018</h3>
                         </div>
+                        <div class="movie">
+                            <figure class="movie__wrapper--img">
+                                <img class="movie__img" src="https://upload.wikimedia.org/wikipedia/en/2/23/P5A_DVD_V01_cover.jpg" alt="">
+                            </figure>
+                            <h2 class="movie__title">Persona 5: The Animation</h2>
+                            <h3 class="movie__release-date">2018</h3>
+                        </div>
+                        <div class="movie">
+                            <figure class="movie__wrapper--img">
+                                <img class="movie__img" src="https://upload.wikimedia.org/wikipedia/en/2/23/P5A_DVD_V01_cover.jpg" alt="">
+                            </figure>
+                            <h2 class="movie__title">Persona 5: The Animation</h2>
+                            <h3 class="movie__release-date">2018</h3>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -107,5 +137,14 @@
             </div>
           </div>
     </footer>
+    <script>
+        function openMenu (){
+            document.body.classList += (` menu__open`)
+        }
+
+        function closeMenu (){
+            document.body.classList.remove(`menu__open`)
+        }
+    </script>
 </body>
 </html>

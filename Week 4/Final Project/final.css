@@ -7,6 +7,11 @@
     font-family: roboto slab, roboto;
 }
 
+html {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
 :root {
     --background-color: rgb(174, 45, 45);
 }
@@ -17,6 +22,10 @@ header {
     background-color: var(--background-color);
 }
 
+li {
+    list-style-type: none;
+}
+
 .container {
     width: 100%;
     max-width: 1300px;
@@ -25,6 +34,7 @@ header {
 }
 
 .row {
+    position: relative;
     height: 100%;
     display: flex;
     justify-content: space-between;
@@ -46,10 +56,10 @@ header {
 .logo__heading {
     font-size: 32px;
     color: #fff;
+    margin-left: 12px;
 }
 
 .links__list {
-    list-style: none;
     display: flex;
     align-items: center;
 }
@@ -64,6 +74,74 @@ header {
     font-size: 20px;
 }
 
+.btn__menu {
+    background-color: transparent;
+    border: none;
+    font-size: 2rem;
+    transition: all 100ms ease;
+    position: absolute;
+    right: 40px;
+    top: 38px;
+    display: none;
+    cursor: pointer;
+}
+
+.btn__menu:hover {
+    color: #6415FF;
+}
+
+@keyframes slidein {
+    /* from {
+        transform: translateX(100%);
+      }
+    
+      to {
+        transform: translateX(-40%);
+      } */
+
+      0% {
+        transform: translateX(100%);
+      }
+
+      70% {
+        transform: translateX(-40%);
+      }
+
+      100% {
+        transform: translateX(0);
+      }
+}
+
+.menu__backdrop {
+    position: absolute;
+    height: 400px;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    z-index: 12;
+    margin: 1.5rem 1rem;
+    border-radius: 0.5rem;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(226, 232, 240);
+    background-color: var(--background-color);
+    padding: 2rem;
+    text-align: center;
+    visibility: hidden;
+}
+
+.menu__links {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.menu__open .menu__backdrop {
+    visibility: visible;
+    animation: slidein 300ms ease;
+}
+
 /*
                 |
 SHOWCASE INFO   |
@@ -75,15 +153,15 @@ main {
 }
 
 #showcase {
+    background-color: red;
     padding: 12px 0;
-    outline: 3px solid darkviolet;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.showcase__title, .showcase__title--para, #showcase__searchbar {
+.showcase__title, .showcase__title--para, #showcase__searchbar, .showcase__btn {
     margin: 12px 0;
 }
 
@@ -96,7 +174,7 @@ main {
 }
 
 #showcase__searchbar {
-    width: 30%;
+    min-width: 30%;
     height: 40px;
     font-size: 20px;
     border-radius: 99px;
@@ -225,8 +303,52 @@ MOBILE DEVICES  |
         justify-content: space-around;
     }
 
+    #showcase {
+        text-align: center;
+    }
+
+    #filter {
+        outline: 2px solid red;
+    }
+
+    .showcase__title, .showcase__title--para {
+        margin-left: 16px;
+        margin-right: 16px;
+    }
+
     #showcase__searchbar {
+        padding: 0 10px;
         font-size: 14px;
+    }
+
+    #showcase__searchbar::placeholder {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 750px) {
+    .logo__heading {
+        text-align: center;
+        font-size: 24px;
+    }
+
+    .links__list {
+        display: none;
+    }
+
+    .btn__menu {
+        display: block;
+    }
+
+    .movies__header--title {
+        text-align: center;
+        font-size: 32px;
+        margin-right: 24px;
+    }
+}
+
+@media (max-width: 600px) {
+    #filter {
         padding: 0;
     }
 }
