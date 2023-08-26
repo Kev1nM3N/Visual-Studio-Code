@@ -1,4 +1,7 @@
 const movieElement = document.querySelector(`.movies`)
+const searchInput = document.getElementById(`showcase__searchbar`)
+
+// https://www.omdbapi.com/?apikey=ae3e12f8&s=
 
 async function main (filter){
     const movies = await fetch (`https://www.omdbapi.com/?apikey=ae3e12f8&s=top`);
@@ -15,8 +18,6 @@ async function main (filter){
     movieElement.innerHTML = moviesData.Search.map((element) => moviesHTML(element)).join(``);
 
 
-
-    console.log(moviesData);
 }
 
 main()
@@ -36,6 +37,23 @@ function filterMovies (event){
     main(event.target.value)
 }
 
-function movieSearch (){
-    console.log(`Hello World`)
+function movieSearch (event){
+    const searchText = searchInput.value
+    localStorage.setItem(`apple`, searchText)
+
+    movieSearchSubmit(searchText)
+
+}
+
+async function movieSearchSubmit(newFilter) {
+    // window.location.href = `${window.location.origin}/Week%204/Final%20Project/searchfinal.html`
+    const id = localStorage.getItem(`apple`)
+
+    const searchMovies = await fetch (`https://www.omdbapi.com/?apikey=ae3e12f8&s=${id}`);
+    const searchMoviesResult = await searchMovies.json();
+
+
+    movieElement.innerHTML = searchMoviesResult.Search.map((element) => moviesHTML(element)).join(``);
+
+    console.log(searchMoviesResult)
 }
