@@ -35,25 +35,36 @@ function moviesHTML (element) {
 
 function filterMovies (event){
     main(event.target.value)
+    movieSearchSubmit(event.target.value)
 }
 
 function movieSearch (event){
-    const searchText = searchInput.value
-    localStorage.setItem(`apple`, searchText)
+    if (event.key === 'Enter') {
+        const searchText = searchInput.value;
+        localStorage.setItem(`apple`, searchText);
 
-    movieSearchSubmit(searchText)
-
+        movieSearchSubmit(searchText);
+    }
 }
 
 async function movieSearchSubmit(newFilter) {
-    // window.location.href = `${window.location.origin}/Week%204/Final%20Project/searchfinal.html`
+    const searchText = searchInput.value;
+    localStorage.setItem(`apple`, searchText);
+
     const id = localStorage.getItem(`apple`)
 
     const searchMovies = await fetch (`https://www.omdbapi.com/?apikey=ae3e12f8&s=${id}`);
     const searchMoviesResult = await searchMovies.json();
 
+    if (newFilter === `New_to_Old`){
+        searchMoviesResult.Search.sort((a, b) => (b.Year) - (a.Year))
+    }
+    else if (newFilter === `Old_to_New`){
+        searchMoviesResult.Search.sort((a, b) => (a.Year) - (b.Year))
+    }
 
-    movieElement.innerHTML = searchMoviesResult.Search.map((element) => moviesHTML(element)).join(``);
+    searchMoviesResult.Search ? movieElement.innerHTML = searchMoviesResult.Search.map((element) => moviesHTML(element)).join(``) : movieElement.innerHTML = `<p>No results found.</p>`;
+    
 
     console.log(searchMoviesResult)
 }
