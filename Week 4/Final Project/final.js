@@ -1,5 +1,7 @@
 const movieElement = document.querySelector(`.movies`)
 const searchInput = document.getElementById(`showcase__searchbar`)
+const changeHeading = document.querySelector(`.movies__header--title`)
+const filterBox = document.getElementById(`filter`)
 
 // https://www.omdbapi.com/?apikey=ae3e12f8&s=
 
@@ -33,10 +35,7 @@ function moviesHTML (element) {
             </div>`
 }
 
-function filterMovies (event){
-    main(event.target.value)
-    movieSearchSubmit(event.target.value)
-}
+
 
 function movieSearch (event){
     if (event.key === 'Enter') {
@@ -56,15 +55,32 @@ async function movieSearchSubmit(newFilter) {
     const searchMovies = await fetch (`https://www.omdbapi.com/?apikey=ae3e12f8&s=${id}`);
     const searchMoviesResult = await searchMovies.json();
 
+    filterBox.selectedIndex = ""
+
+    changeHeading.innerHTML = `Results For: ${id}`
+
     if (newFilter === `New_to_Old`){
         searchMoviesResult.Search.sort((a, b) => (b.Year) - (a.Year))
+        filterBox.selectedIndex = 1
     }
     else if (newFilter === `Old_to_New`){
         searchMoviesResult.Search.sort((a, b) => (a.Year) - (b.Year))
+        filterBox.selectedIndex = 2
     }
 
     searchMoviesResult.Search ? movieElement.innerHTML = searchMoviesResult.Search.map((element) => moviesHTML(element)).join(``) : movieElement.innerHTML = `<p>No results found.</p>`;
     
 
     console.log(searchMoviesResult)
+}
+
+function filterMovies (event){
+    const searchText = searchInput.value;
+
+    if (!searchText){
+        main(event.target.value)
+    }
+    else {
+        movieSearchSubmit(event.target.value)
+    }
 }
