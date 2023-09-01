@@ -4,21 +4,28 @@ const changeHeading = document.querySelector(`.movies__header--title`)
 const filterBox = document.getElementById(`filter`)
 
 // https://www.omdbapi.com/?apikey=ae3e12f8&s=
+// Let's make a movie page, a TV series page, and an everything page from home link
 
 async function main (filter){
     const movies = await fetch (`https://www.omdbapi.com/?apikey=ae3e12f8&s=top`);
     const moviesData = await movies.json();
-    
+    filterBox.selectedIndex = ""
+
+    const filteredMovies = moviesData.Search.filter(element => /^[0-9]+$/.test(element.Year));
+
     if (filter === `New_to_Old`){
-        moviesData.Search.sort((a, b) => (b.Year) - (a.Year))
+        filteredMovies.sort((a, b) => (b.Year) - (a.Year));
+        filterBox.selectedIndex = 1;
     }
     else if (filter === `Old_to_New`){
-        moviesData.Search.sort((a, b) => (a.Year) - (b.Year))
+        filteredMovies.sort((a, b) => (a.Year) - (b.Year));
+        filterBox.selectedIndex = 2;
     }
 
-
-    movieElement.innerHTML = moviesData.Search.map((element) => moviesHTML(element)).join(``);
-
+    filteredMovies.length > 0
+        ? movieElement.innerHTML = filteredMovies.map((element) => moviesHTML(element)).join(``)
+        : movieElement.innerHTML = `<p>No results found.</p>`;
+    console.log(filteredMovies)
 
 }
 
@@ -35,19 +42,23 @@ function moviesHTML (element) {
             </div>`
 }
 
-
-
 function movieSearch (event){
     if (event.key === 'Enter') {
         const searchText = searchInput.value;
+        if (!searchText){
+            return alert(`Please Enter a Valid Movie`)
+        }
         localStorage.setItem(`apple`, searchText);
-
         movieSearchSubmit(searchText);
     }
 }
 
 async function movieSearchSubmit(newFilter) {
     const searchText = searchInput.value;
+    if (!searchText){
+        return alert(`Please Enter a Valid Movie`)
+    }
+
     localStorage.setItem(`apple`, searchText);
 
     const id = localStorage.getItem(`apple`)
@@ -58,29 +69,25 @@ async function movieSearchSubmit(newFilter) {
     filterBox.selectedIndex = ""
 
     changeHeading.innerHTML = `Results For: ${id}`
+    const filteredMovies = searchMoviesResult.Search.filter(element => /^[0-9]+$/.test(element.Year));
 
     if (newFilter === `New_to_Old`){
-        searchMoviesResult.Search.sort((a, b) => (b.Year) - (a.Year))
-        filterBox.selectedIndex = 1
+        filteredMovies.sort((a, b) => (b.Year) - (a.Year));
+        filterBox.selectedIndex = 1;
     }
     else if (newFilter === `Old_to_New`){
-        searchMoviesResult.Search.sort((a, b) => (a.Year) - (b.Year))
-        filterBox.selectedIndex = 2
+        filteredMovies.sort((a, b) => (a.Year) - (b.Year));
+        filterBox.selectedIndex = 2;
     }
 
-    searchMoviesResult.Search ? movieElement.innerHTML = searchMoviesResult.Search.map((element) => moviesHTML(element)).join(``) : movieElement.innerHTML = `<p>No results found.</p>`;
-    
+    filteredMovies.length > 0
+        ? movieElement.innerHTML = filteredMovies.map((element) => moviesHTML(element)).join(``)
+        : movieElement.innerHTML = `<p>No results found.</p>`;
 
-    console.log(searchMoviesResult)
+    console.log(searchMoviesResult);
 }
 
 function filterMovies (event){
     const searchText = searchInput.value;
-
-    if (!searchText){
-        main(event.target.value)
-    }
-    else {
-        movieSearchSubmit(event.target.value)
-    }
+    !searchText ? main(event.target.value) : movieSearchSubmit(event.target.value);
 }
