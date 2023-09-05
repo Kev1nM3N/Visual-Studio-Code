@@ -4,7 +4,6 @@ const changeHeading = document.querySelector(`.movies__header--title`)
 const filterBox = document.getElementById(`filter`)
 
 // https://www.omdbapi.com/?apikey=ae3e12f8&s=
-// Let's make a movie page, a TV series page, and an everything page from home link
 
 async function main (filter){
     const movies = await fetch (`https://www.omdbapi.com/?apikey=ae3e12f8&s=top`);

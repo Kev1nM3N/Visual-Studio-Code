@@ -13,12 +13,12 @@ html {
 }
 
 :root {
-    --background-color: rgb(174, 45, 45);
+    --background-color: #353333;
 }
 
 header {
     width: 100%;
-    height: 120px;
+    height: 90px;
     background-color: var(--background-color);
 }
 
@@ -43,18 +43,17 @@ li {
 .logo__info--container{
     display: flex;
     align-items: center;
-    justify-content: space-between;
     width: 30%;
     height: 100%;
     padding-left: 18px;
 }
 
 .logo__img {
-    width: 100px;
+    width: 70px;
 }
 
 .logo__heading {
-    font-size: 32px;
+    font-size: 24px;
     color: #fff;
     margin-left: 12px;
 }
@@ -65,13 +64,14 @@ li {
 }
 
 .list-item, .footer__link {
-    margin: 0 12px;
+    margin: 0 50px;
 }
 
 .link, .footer__link, .footer__copyright {
     color: white;
     text-decoration: none;
     font-size: 20px;
+    cursor: no-drop;
 }
 
 .btn__menu {
@@ -153,7 +153,9 @@ main {
 }
 
 #showcase {
-    background-color: red;
+    height: calc(100vh - 90px);
+    background-color: rgb(157, 38, 38);
+    color: white;
     padding: 12px 0;
     display: flex;
     flex-direction: column;
@@ -166,11 +168,11 @@ main {
 }
 
 .showcase__title {
-    font-size: 30px;
+    font-size: 56px;
 }
 
 .showcase__title--para{
-    font-size: 20px;
+    font-size: 28px;
 }
 
 #showcase__searchbar {
@@ -178,7 +180,7 @@ main {
     height: 40px;
     font-size: 20px;
     border-radius: 99px;
-    border: 2px solid;
+    border: none;
     padding: 0 10px;
 }
 
@@ -188,9 +190,10 @@ main {
 }
 
 .showcase__btn {
-    padding: 0.5rem 5rem;
-    border-radius: 6px;
-    font-size: 1rem;
+    padding: 0.7rem 6rem;
+    border-radius: 9px;
+    border: none;
+    font-size: 1.2rem;
     transition: all 300ms ease;
     cursor: pointer;
 }
@@ -202,7 +205,7 @@ main {
 
 
 #showcase__searchbar:hover {
-    border: 2px solid aqua;
+    border: 2px solid darkred;
 }
 
 #showcase__searchbar:focus {
@@ -251,7 +254,16 @@ MAIN MOVIES     |
 
 .movie {
     margin: 1.2rem;
+    transition: all 300ms ease;
+    cursor: not-allowed;
 }
+
+.movie:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 22px 43px 9px rgba(0,0,0,0.2);
+    border: 1px solid;
+}
+
 
 .movie__title {
     font-size: 20px;
@@ -263,6 +275,7 @@ MAIN MOVIES     |
 
 .movie__wrapper--img {
     max-width: 300px;
+    margin: auto;
 }
 
 .movie__img {
