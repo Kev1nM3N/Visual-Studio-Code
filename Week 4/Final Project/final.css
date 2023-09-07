@@ -148,6 +148,8 @@ SHOWCASE INFO   |
                 V
 */
 
+
+
 main {
     height: 100%;
 }
@@ -220,9 +222,28 @@ MAIN MOVIES     |
                 V
 */
 
+
+
 #main__movies {
     padding: 0 18px;
     margin-bottom: 56px;
+}
+
+.fa-spinner {
+    animation: rotate 600ms infinite linear;
+    font-size: 100px;
+    color: #7342d6;
+    display: none !important;
+}
+  
+@keyframes rotate {
+    0% {
+        transform: rotate(0);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 .row__movies {
