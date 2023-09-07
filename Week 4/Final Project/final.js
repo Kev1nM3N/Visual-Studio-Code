@@ -6,6 +6,7 @@ const mainMoviesElement = document.getElementById(`main__movies`)
 const rowMovies = document.querySelector(`row__movies`)
 const spinningWheel = document.querySelector(`.fa-spinner`)
 
+
 // https://www.omdbapi.com/?apikey=ae3e12f8&s=
 
 async function main (filter){
@@ -68,7 +69,6 @@ async function movieSearchSubmit(newFilter) {
 
     const id = localStorage.getItem(`apple`)
 
-
     if (movieElement){
         movieElement.setAttribute(`style`, `display: none`)
         spinningWheel.setAttribute(`style`, `display: block !important`)
@@ -110,7 +110,7 @@ async function movieSearchSubmit(newFilter) {
 }
 
 
-function filterMovies (event){
+function filterMovies(event) {
     const searchText = searchInput.value;
     !searchText ? main(event.target.value) : movieSearchSubmit(event.target.value);
 }
