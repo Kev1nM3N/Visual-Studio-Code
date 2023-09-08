@@ -13,6 +13,7 @@ async function main (filter){
     const movies = await fetch (`https://www.omdbapi.com/?apikey=ae3e12f8&s=top`);
     const moviesData = await movies.json();
     filterBox.selectedIndex = ""
+    changeHeading.innerHTML = `Trending Now`
 
     const filteredMovies = moviesData.Search.filter(element => /^[0-9]+$/.test(element.Year));
 
@@ -76,7 +77,7 @@ async function movieSearchSubmit(newFilter) {
 
     setTimeout(() => {
         spinningWheel.removeAttribute(`style`, `display: block !important`)
-        movieElement.removeAttribute(`style`, `display: block`)
+        movieElement.removeAttribute(`style`, `display: none`)
         changeHeading.innerHTML = `Results For: ${id}`
     }, 3000);
     
