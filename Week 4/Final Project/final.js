@@ -58,10 +58,7 @@ function movieSearch (event){
 }
 
 async function movieSearchSubmit(newFilter) {
-
     mainMoviesElement.scrollIntoView()
-    let searchMovies
-    let searchMoviesResult
 
     const searchText = searchInput.value;
     if (!searchText){
@@ -84,27 +81,35 @@ async function movieSearchSubmit(newFilter) {
     }, 3000);
     
     
+    actuallyFetchingMovies(id, newFilter)
+}
+
+async function actuallyFetchingMovies (id, newFilter){
+    let searchMovies
+    let searchMoviesResult
+
     searchMovies = await fetch (`https://www.omdbapi.com/?apikey=ae3e12f8&s=${id}`);
     searchMoviesResult = await searchMovies.json();
 
-    
+    actuallyFilteringMovies(searchMoviesResult, newFilter)
+}
+
+function actuallyFilteringMovies(searchMoviesResult, newFilter) {
     if (!searchMoviesResult || !searchMoviesResult.Search) {
         movieElement.innerHTML = `<p>No results found.</p>`;
     } else {
-        filterBox.selectedIndex = "";
 
-        changeHeading.innerHTML = `Fetching...`
+        changeHeading.innerHTML = `Fetching...`;
         const filteredMovies = searchMoviesResult.Search.filter(element => /^[0-9]+$/.test(element.Year));
 
-        if (newFilter === `New_to_Old`){
+        if (newFilter === `New_to_Old`) {
             filteredMovies.sort((a, b) => (b.Year) - (a.Year));
             filterBox.selectedIndex = 1;
-        }
-        else if (newFilter === `Old_to_New`){
+        } else if (newFilter === `Old_to_New`) {
             filteredMovies.sort((a, b) => (a.Year) - (b.Year));
             filterBox.selectedIndex = 2;
         }
-        
+
         filteredMovies.length > 0
             ? movieElement.innerHTML = filteredMovies.map((element) => moviesHTML(element)).join(``)
             : movieElement.innerHTML = `<p>No results found2.</p>`;
@@ -114,6 +119,12 @@ async function movieSearchSubmit(newFilter) {
 
 
 function filterMovies(event) {
+    const selectedFilter = event.target.value;
     const searchText = searchInput.value;
-    !searchText ? main(event.target.value) : movieSearchSubmit(event.target.value);
+    
+    if (!searchText) {
+        main(selectedFilter);
+    } else {
+        movieSearchSubmit(selectedFilter);
+    }
 }
