@@ -341,10 +341,6 @@ MOBILE DEVICES  |
         text-align: center;
     }
 
-    #filter {
-        outline: 2px solid red;
-    }
-
     .showcase__title, .showcase__title--para {
         margin-left: 16px;
         margin-right: 16px;

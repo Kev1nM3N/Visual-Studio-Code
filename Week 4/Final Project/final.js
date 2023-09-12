@@ -58,6 +58,8 @@ function movieSearch (event){
 }
 
 async function movieSearchSubmit(newFilter) {
+
+    mainMoviesElement.scrollIntoView()
     let searchMovies
     let searchMoviesResult
 
