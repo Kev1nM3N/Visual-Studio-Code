@@ -98,6 +98,7 @@ function actuallyFilteringMovies(searchMoviesResult, newFilter) {
     if (!searchMoviesResult || !searchMoviesResult.Search) {
         movieElement.innerHTML = `<p>No results found.</p>`;
     } else {
+        filterBox.selectedIndex = ""
 
         changeHeading.innerHTML = `Fetching...`;
         const filteredMovies = searchMoviesResult.Search.filter(element => /^[0-9]+$/.test(element.Year));
