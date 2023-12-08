@@ -1,7 +1,3 @@
-
-
-
-
 // FAKE DATA
 function getBooks() {
   return [
