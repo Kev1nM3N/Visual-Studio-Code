@@ -58,8 +58,6 @@ header {
     position: relative;
 }
 
-
-
 video {
     position: absolute;
     top: 0;
@@ -137,18 +135,18 @@ video {
 
 .social li {
     list-style: none;
+    margin: 0 15px;
 }
 
 .social li a {
     display: inline-block;
     filter: invert(1);
-    margin: 0 30px;
-    transform: scale(3);
-    transition: 0.5s linear;
+    transition: 0.3s linear;
+    font-size: 32px;
 }
 
 .social li a:hover {
-    transform: scale(1) translateY(-15px);
+    font-size: 48px;
 }
 
 .copyright {
@@ -156,7 +154,7 @@ video {
     bottom: 12px;
     right: 12px;
     z-index: 3;
-    color: #d4d6d6;
+    color: #f8f8f8;
 }
 
 .menu {

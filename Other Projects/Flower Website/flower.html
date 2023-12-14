@@ -7,6 +7,7 @@
     <title>Floral Company</title>
     <link rel="shortcut icon" href="./cute-kawaii-pink-flower-icons-cute-kawaii-pink-flower-icons-vector-illustration-167237381.jpg">
     <link rel="stylesheet" href="./flower.css">
+    <script src="./flower.js" defer></script>
     <script src="https://kit.fontawesome.com/3fa994a8ab.js" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -21,6 +22,9 @@
                 <h2 class="logo">Floral Co.</h2> 
                 <img src="./a3ef8f4d9808108d598dea46385ed48c-rose-flower-icon.png" alt="">
             </div>
+
+            <p>Date: <span id="timeClock"></span></p>
+
             <div class="toggle"><i class="fa-solid fa-bars"></i></div>
         </header>
 
@@ -56,22 +60,5 @@
             <li><a href="#">Blog</a></li>
         </ul>
     </div>
-
-    <script>
-        const menuToggle = document.querySelector(`.fa-bars`)
-        const showcase = document.getElementById(`showcase`)
-        const closeMenu = document.querySelector(`.fa-xmark`)
-
-        menuToggle.addEventListener(`click`, () => {
-            menuToggle.classList.toggle(`active`)
-            showcase.classList.toggle(`active`)
-        })
-
-        closeMenu.addEventListener(`click`, () => {
-            closeMenu.classList.toggle(`active`)
-            showcase.classList.toggle(`active`)
-            menuToggle.classList.remove(`active`) // hide the toggle button when the menu is active
-        })
-    </script>
 </body>
 </html>
