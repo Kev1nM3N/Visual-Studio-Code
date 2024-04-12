@@ -135,3 +135,46 @@ main {
     padding: 0 24px;
     height: fit-content;
 }
+
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    outline: 2px solid red;
+    display: flex;
+    padding: 12px 0;
+    text-align: center;
+}
+
+.row {
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.card__list {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: calc(33.3% - 40px);
+    margin: 15px;
+}
+
+figure {
+    width: 100%;
+}
+
+img {
+    width: 100%;
+    max-width: 300px;
+}
+
+.persona__name {
+    font-size: 24px;
+}
