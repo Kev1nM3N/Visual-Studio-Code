@@ -1,0 +1,137 @@
+/* The font used for the persona website is actually "wigwag-bold", sans serif */
+
+:root {
+    --Sand-Tan: #e1b382;
+    --Sand-Tan-Shadow: #c89666;
+    --Night-Blue: #2d545e;
+    --Night-Blue-Shadow: #12343b;
+    --Dusty-White: #edf7f6;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: wigwag-bold, sans-serif;
+}
+
+body {
+    background-color: var(--Night-Blue-Shadow);
+}
+
+nav {
+    background-color: var(--Sand-Tan);
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 70px;
+}
+
+.left-side {
+    display: flex;
+    align-items: center;
+}
+
+ul {
+    list-style-type: none;
+    display: flex;
+}
+
+li {
+    padding: 0 15px;
+}
+
+a {
+    text-decoration: none;
+    font-size: large;
+}
+
+.personaGame__link1 {
+    color: blue;
+}
+
+.personaGame__link2 {
+    color: yellow;
+}
+
+.personaGame__link3 {
+    color: red;
+}
+
+.personaGame__link:hover {
+    color: purple;
+}
+
+.headerLogo {
+    width: 50px;
+    margin: 0 6px;
+}
+
+header {
+    min-height: calc(100vh - 70px);
+    color: var(--Dusty-White);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 56px;
+}
+
+header h2 {
+    font-size: 28px;
+}
+
+header h1, header h2 {
+    margin: 12px 0;
+}
+
+.searchbar {
+    min-width: 30%;
+    height: 40px;
+    font-size: 20px;
+    border-radius: 99px;
+    border: none;
+    padding: 0 10px;
+}
+
+.searchbar::placeholder {
+    text-align: center;
+    font-size: 22px;
+}
+
+.searchbarButton {
+    padding: 0.7rem 6rem;
+    border-radius: 9px;
+    border: none;
+    font-size: 1.2rem;
+    transition: all 300ms ease;
+    cursor: pointer;
+    margin: 20px 0;
+}
+
+main {
+    min-height: 100vh;
+    outline: 2px solid red;
+    display: flex;
+    color: var(--Dusty-White);
+    display: flex;
+}
+
+.main__header {
+    width: 100%;
+    height: 70px;
+    outline: 2px solid yellow;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#filter {
+    padding: 0 24px;
+    height: fit-content;
+}

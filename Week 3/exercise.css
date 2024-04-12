@@ -10,11 +10,13 @@
 :root {
     --div-image-width-size: 200px; 
     --div-image-height-size: 100px; 
+    --cosmic-latte: #fff8e7;
+    --white: #f8f8f8;
 }
 
 nav {
     grid-template-columns: repeat(5, 20%);
-    background-color: beige;
+    background-color: var(--cosmic-latte);
     display: grid;
 }
 
@@ -49,3 +51,13 @@ ul {
     margin: 0 12px;
 }
 
+header {
+    height: calc(100vh - 128px);
+    color: var(--white);
+    display: grid;
+    grid-template-columns: repeat(5 , 20%);
+    grid-template-rows: repeat(5, 20%);
+}
+
+.btn {
+}

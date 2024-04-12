@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your List of Personas</title>
+    <link rel="stylesheet" href="./persona.css">
+</head>
+<body>
+    <section>
+        <nav>
+            <div class="left-side">
+                <figure>
+                    <img class="headerLogo" src="./assets/notepad.svg" alt="">
+                </figure>
+
+                <h1>Your Persona Compendium</h1>
+            </div>
+
+            <div class="right-side">
+                <ul class="personaGames">
+                    <a class="personaGame__link personaGame__link1" href="">
+                        <li>Persona 3</li>
+                    </a>
+                    <a class="personaGame__link personaGame__link2" href="">
+                        <li>Persona 4</li>
+                    </a>
+                    <a class="personaGame__link personaGame__link3" href="">
+                        <li>Persona 5</li>
+                    </a>
+                </ul>
+            </div>
+        </nav>
+
+        <header>
+            <h1>Browse through our compendium of personas!</h1>
+            <h2>from Persona 3 through Persona 5 Royal</h2>          
+            <input class="searchbar" type="search" placeholder="Search Here">
+            <button class="searchbarButton">Search</button>
+        </header>
+    </section>
+
+    <main>
+        <div class="main__header">
+            <h2 style="font-size: 28px;">Personas</h2>
+
+            <select name="" id="filter">
+                <option value="">Sort</option>
+                <option value="Persona 3">Persona 3</option>
+                <option value="Persona 4">Persona 4</option>
+                <option value="Persona 5">Persona 5</option>
+            </select>
+        </div>
+
+        <div id="personas">
+            <div class="persona">
+                <figure class="persona__img--wrapper">
+                    <img style="width: 40px;" src="https://static.wikia.nocookie.net/persona-records/images/1/19/Arsene.png/revision/latest?cb=20210428133034" alt="" class="persona__img">
+                </figure>
+                <h2 class="persona__name">Name</h2>
+                <h3 class="persona__game">Game</h3>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
