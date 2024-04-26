@@ -185,6 +185,7 @@ let personaArray = [
     {
         personaName: "Ame-no-Uzume",
         "inherits": "Almighty",
+        "skillCard": false,
         "item": "Senryou Yakusha",
         "arcana": "Lovers",
         "level": 29,
@@ -197,6 +198,7 @@ let personaArray = [
     {
         personaName: "Ananta",
         "inherits": "Nuclear",
+        "skillCard": false,
         "item": "Hua Khon",
         "arcana": "Star",
         "level": 43,

@@ -7,6 +7,14 @@
     box-sizing: border-box;
 }
 
+body {
+    background-color: black;
+}
+
+.dark-theme {
+    background-color: aquamarine;
+}
+
 :root {
     --div-image-width-size: 200px; 
     --div-image-height-size: 100px; 
