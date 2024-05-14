@@ -7,18 +7,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link rel="stylesheet" href="index.css">
+  <script defer src="user.js"></script>
 </head>
 
 <body>
   <div class="post__search">
-    <a href="/index.html">
+    <a href="index.html">
       <button>← Back</button>
     </a>
     <div class="post__search--container">
       <label class="post__search--label">
         Search by Id
       </label>
-      <input type="text" placeholder="1">
+      <input onchange="onSearchChange(event)" type="number">
     </div>
   </div>
   <div class="post-list">
