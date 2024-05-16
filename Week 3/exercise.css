@@ -7,19 +7,22 @@
     box-sizing: border-box;
 }
 
-body {
-    background-color: black;
-}
-
-.dark-theme {
-    background-color: aquamarine;
-}
-
 :root {
     --div-image-width-size: 200px; 
     --div-image-height-size: 100px; 
     --cosmic-latte: #fff8e7;
     --white: #f8f8f8;
+    --light-blue: #dbeafe;
+    --light-pink: #fce7f3;
+    --mixed-colors: linear-gradient(var(--light-blue), var(--light-pink));
+}
+
+body {
+    background-image: var(--mixed-colors);
+}
+
+.dark-theme {
+    background-color: aquamarine;
 }
 
 nav {

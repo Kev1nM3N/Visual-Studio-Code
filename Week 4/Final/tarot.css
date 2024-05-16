@@ -1,0 +1,262 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+
+:root {
+    --Sand-Tan: #e1b382;
+    --Sand-Tan-Shadow: #c89666;
+    --Night-Blue: #2d545e;
+    --Day-Blue-Shadow: #2563eb;
+    --Dusty-White: #edf7f6;
+    --light-blue: #dbeafe;
+    --light-pink: #fce7f3;
+    --my-black: #27272a;
+    --mixed-colors: linear-gradient(var(--light-blue), var(--light-pink), var(--cosmic-latte));
+    --cosmic-latte: #fff8e7;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+section {
+    background-image: var(--mixed-colors);
+}
+
+/* Nav Bar begins */
+
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 70px;
+    padding-top: 12px;
+}
+
+#personal-img {
+    width: 60px;
+    border-radius: 99px;
+    border: 2px solid var(--Night-Blue);
+    animation: animate-pfp 800ms 200ms backwards;
+    transition: all 300ms ease;
+}
+
+#personal-img:hover {
+    scale: 1.1;
+}
+
+@keyframes animate-pfp {
+    0% {
+        transform: scale(0);
+    }
+
+    80% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.left-side {
+    height: 100%;
+    min-width: 200px;
+    display: flex;
+}
+
+img {
+    width: 100%;
+}
+
+ul {
+    list-style-type: none;
+    display: flex;
+}
+
+a {
+    text-decoration: none;
+    font-size: large;
+    color: var(--my-black);
+    font-weight: 700;
+    margin: 0 15px;
+    transition: all 200ms ease;
+}
+
+a:hover {
+    color: var(--Day-Blue-Shadow);
+}
+
+.link__hover-effect {
+    position: relative;
+}
+
+.link__hover-effect::before {
+    content: "";
+    position: absolute;
+    bottom: -3px;
+    height: 3px;
+    background-color: var(--Day-Blue-Shadow);
+    width: 0;
+    right: 0;
+    transition: all 300ms ease;
+}
+
+.link__hover-effect:hover::before {
+    left: 0;
+    width: 100%;
+}
+
+/* Header */
+
+header {
+    min-height: calc(100vh - 70px);
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.header__left-side {
+    width: 55%;
+    padding: 0 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header__right-side {
+    width: 45%;
+}
+
+.header__right-side img {
+    width: 75%;
+}
+
+header h1 {
+    font-size: 56px;
+    color: var(--my-black);
+}
+
+header p {
+    font-size: 20px;
+    color: #3f3f46;
+    line-height: 30px;
+    padding: 0 48px;
+}
+
+header h1, header p {
+    margin: 12px 0;
+}
+
+.searchBox {
+    position: relative;
+    width: 100%;
+    margin-top: 12px;
+}
+
+.searchbar {
+    width: 80%;
+    height: 60px;
+    font-size: 20px;
+    border-radius: 99px;
+    border: 2px solid rgba(45, 84, 94, 0.1);
+    padding: 0 17rem 0 30px;
+    transition: all 300ms ease;
+}
+
+.searchbar::placeholder {
+    font-weight: 300;
+    font-size: 18px;
+}
+
+.searchbar:hover {
+    border-color: rgb(160 174 192);
+}
+
+
+.searchbar:focus {
+    border-color: #6415FF;
+    outline: 0;
+}
+
+.searchbarButton {
+    position: absolute;
+    right: 5.4rem;
+    top: 6px;
+    padding: 0.8rem 6rem;
+    border-radius: 22px;
+    border: none;
+    font-size: 1.2rem;
+    font-weight: 800;
+    transition: all 300ms ease;
+    cursor: pointer;
+    background-color: var(--Day-Blue-Shadow);
+    color: var(--Dusty-White);
+}
+
+.searchbarButton:hover {
+    box-shadow: 0 10px 15px -3px rgba(0,0,0,.1);
+    background-color: rgb(29 78 216 / 1);
+}
+
+/* Tarot Cards */
+
+main {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--cosmic-latte);
+}
+
+.main__header {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#filter {
+    padding-right: 32px;
+    padding-left: 8px;
+    height: 1.5rem;
+    border-radius: 9px;
+}
+
+.main__header h2 {
+    color: var(--my-black);
+}
+
+.container {
+    display: flex;
+    padding: 12px 0;
+    text-align: center;
+}
+
+.row {
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.card__list {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: calc(33.3% - 40px);
+    margin: 15px;
+}
+
+.card__img--wrapper {
+
+}
+
+.tarot__name {
+    font-size: 24px;
+}
