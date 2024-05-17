@@ -11,6 +11,11 @@
     --my-black: #27272a;
     --mixed-colors: linear-gradient(var(--light-blue), var(--light-pink), var(--cosmic-latte));
     --cosmic-latte: #fff8e7;
+    --footer-background-color: #1b2a4e;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 * {
@@ -236,7 +241,7 @@ main {
 }
 
 .row {
-    max-width: 800px;
+    /* max-width: 800px; */
     width: 100%;
     margin: 0 auto;
 }
@@ -249,14 +254,82 @@ main {
 }
 
 .card {
-    width: calc(33.3% - 40px);
-    margin: 15px;
-}
-
-.card__img--wrapper {
-
+    /* width: calc(33.3% - 40px); */
+    width: calc(100% / 4 - 40px);
+    margin: 25px 15px;
 }
 
 .tarot__name {
-    font-size: 24px;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.tarot__category {
+    font-size: 16px;
+}
+
+.tarot__img {
+    width: 180px;
+    cursor: pointer;
+}
+
+/* Footer */
+
+footer {
+    position: relative;
+    /* background-color: var(--footer-background-color); */
+    background-image: linear-gradient(var(--cosmic-latte), var(--light-pink), var(--light-blue));
+    display: flex;
+    justify-content: center;
+    padding: 6% 0;
+}
+
+.footer__row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer__anchor {
+    position: relative;
+}
+
+.footer__anchor:hover .top {
+    opacity: 1;
+    transform: translateX(6rem);
+}
+
+.top {
+    position: absolute;
+    right: 0;
+    bottom: 2.5rem;
+    transition: all 300ms ease;
+    z-index: 1;
+    opacity: 0;
+}
+
+.upArrow {
+    width: 16px;
+}
+
+.footer__logo--img {
+    width: 180px;
+    /* filter: invert(1); */
+}
+
+.footer__social--list {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin: 24px 0;
+}
+
+.footer__copyright {
+    margin: 12px 0;
+}
+
+.footer__social--link,
+.footer__copyright {
+    color: var(--my-black);
+    /* color: var(--Dusty-White); */
 }
