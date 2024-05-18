@@ -17,55 +17,7 @@
     --mixed-colors: linear-gradient(var(--light-blue), var(--light-pink));
 }
 
-body {
-    background-image: var(--mixed-colors);
+body{
+    background: #3C5377;
 }
 
-.dark-theme {
-    background-color: aquamarine;
-}
-
-nav {
-    grid-template-columns: repeat(5, 20%);
-    background-color: var(--cosmic-latte);
-    display: grid;
-}
-
-.KD-Logo {
-    width: 100%;
-    height: var(--div-image-height-size);
-}
-
-figure:nth-child(1){
-    grid-column-start: 1;
-    align-self: center;
-    justify-self: start;
-}
-
-figure:nth-child(2){
-    grid-column-start: 3;
-    justify-self: center;
-}
-
-.pfp {
-    --div-image-width-size: 125px;
-    width: var(--div-image-width-size);
-    height: 100%;
-}
-
-ul {
-    grid-column-start: 5;
-    align-self: center;
-    display: flex;
-    justify-content: space-around;
-    list-style-type: none;
-    margin: 0 12px;
-}
-
-header {
-    height: calc(100vh - 128px);
-    color: var(--white);
-    display: grid;
-    grid-template-columns: repeat(5 , 20%);
-    grid-template-rows: repeat(5, 20%);
-}

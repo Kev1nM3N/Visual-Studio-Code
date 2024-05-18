@@ -2,7 +2,7 @@
 
 let cardList = document.querySelector(`.card__list`);
 
-async function renderCards (){
+async function renderCards (filter){
     let response = await fetch(`https://tarotapi.dev/api/v1/cards`);
     let data = await response.json();
     let allCards = data.cards;
@@ -48,6 +48,16 @@ async function renderCards (){
 
     //Editing the DOM
     cardList.innerHTML = mergedCards.map((element) => renderCardsHTML(element)).join(``);
+
+    if (filter === 'MAJOR'){
+        cardList.innerHTML = majorMergedCards.map((element) => renderCardsHTML(element)).join(``);
+    }
+    else if (filter === 'MINOR'){
+        cardList.innerHTML = minorMergedCards.map((element) => renderCardsHTML(element)).join(``);
+    }
+    else if (filter === 'FACE'){
+        cardList.innerHTML = faceMergedCards.map((element) => renderCardsHTML(element)).join(``);
+    }
 }
 
 renderCards();
@@ -55,11 +65,16 @@ renderCards();
 function renderCardsHTML (element) {
     return `<div class="card">
                 <figure class="card__img--wrapper">
-                    <img src="${element.image}" alt="" class="tarot__img">
+                    <img src="./assets/Tarot back design.jpg" alt="" class="tarot__frontimg">
+                    <img src="${element.image}" alt="" class="tarot__backimg">
                 </figure>
 
                 <p class="tarot__name">${element.name}</p>
                 <p class="tarot__category">${element.type.toUpperCase()}</p>
                 <p class="tarot__number">${element.value}</p>
             </div>`
+}
+
+function filterCards (event){
+    renderCards(event.target.value)
 }

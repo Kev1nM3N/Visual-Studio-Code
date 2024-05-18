@@ -41,7 +41,7 @@ nav {
 }
 
 #personal-img {
-    width: 60px;
+    width: 50px;
     border-radius: 99px;
     border: 2px solid var(--Night-Blue);
     animation: animate-pfp 800ms 200ms backwards;
@@ -167,7 +167,7 @@ header h1, header p {
     font-size: 20px;
     border-radius: 99px;
     border: 2px solid rgba(45, 84, 94, 0.1);
-    padding: 0 17rem 0 30px;
+    padding: 0 16rem 0 30px;
     transition: all 300ms ease;
 }
 
@@ -190,13 +190,13 @@ header h1, header p {
     position: absolute;
     right: 5.4rem;
     top: 6px;
-    padding: 0.8rem 6rem;
+    padding: 0.8rem 5.5rem;
     border-radius: 22px;
     border: none;
     font-size: 1.2rem;
     font-weight: 800;
     transition: all 300ms ease;
-    cursor: pointer;
+    cursor: no-drop;
     background-color: var(--Day-Blue-Shadow);
     color: var(--Dusty-White);
 }
@@ -257,6 +257,21 @@ main {
     /* width: calc(33.3% - 40px); */
     width: calc(100% / 4 - 40px);
     margin: 25px 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card__img--wrapper {
+    position: relative;
+    width: fit-content;
+    transform-style: preserve-3d;
+    transition: all 0.8s ease;
+    margin-bottom: 6px;
+}
+
+.card__img--wrapper:hover {
+    transform: rotateY(180deg);
 }
 
 .tarot__name {
@@ -268,9 +283,25 @@ main {
     font-size: 16px;
 }
 
-.tarot__img {
+.tarot__frontimg {
     width: 180px;
+    height: 100%;
     cursor: pointer;
+    backface-visibility: hidden;
+    overflow: hidden;
+    border-radius: 9px;
+}
+
+.tarot__backimg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    overflow: hidden;
+    transform: rotateY(180deg);
+    border-radius: 9px;
 }
 
 /* Footer */
