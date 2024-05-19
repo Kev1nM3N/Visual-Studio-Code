@@ -1,6 +1,8 @@
 //https://tarotapi.dev/api/v1/cards
-
+let cards;
 let cardList = document.querySelector(`.card__list`);
+let loadingBackground = document.querySelector(`.loading__background`)
+let mainPage = document.querySelector('.card__list');
 
 async function renderCards (filter){
     let response = await fetch(`https://tarotapi.dev/api/v1/cards`);
@@ -23,7 +25,7 @@ async function renderCards (filter){
 
     minorMergedCards.find((element) => {
         if (["page", "knight", "queen", "king"].includes(element.value)){
-             element.category = "face";
+                element.category = "face";
         }
     });
 
@@ -58,9 +60,14 @@ async function renderCards (filter){
     else if (filter === 'FACE'){
         cardList.innerHTML = faceMergedCards.map((element) => renderCardsHTML(element)).join(``);
     }
+
+    loadingBackground.remove()
 }
 
-renderCards();
+setTimeout(() => {
+    renderCards();
+}, 3000);
+
 
 function renderCardsHTML (element) {
     return `<div class="card">
@@ -77,4 +84,12 @@ function renderCardsHTML (element) {
 
 function filterCards (event){
     renderCards(event.target.value)
+}
+
+function openMenu (){
+    document.body.classList += (` menu__open`)
+}
+
+function closeMenu (){
+    document.body.classList.remove(`menu__open`)
 }

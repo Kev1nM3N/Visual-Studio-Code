@@ -6,10 +6,12 @@
     <title>The Tarot Compendium</title>
     <link rel="stylesheet" href="./tarot.css">
     <link rel="icon" href="./assets/tarotIcon.png">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/3fa994a8ab.js" crossorigin="anonymous"></script>
     <script defer src="./tarot.js"></script>
 </head>
 <body>
-    <section>
+    <section data-aos="fade-right">
         <nav>
             <div class="left-side">
                 <img class="headerLogo" src="./assets/KD-left-transparent-svg.svg" alt="">
@@ -21,16 +23,34 @@
 
             <div class="right-side">
                 <ul class="AboutInfo">
-                    <a class="link__hover-effect" href="">
+                    <a class="link__hover-effect" href="javascript:void(0)">
                         <li>About</li>
                     </a>
-                    <a class="link__hover-effect" href="">
+                    <a class="link__hover-effect" href="javascript:void(0)">
                         <li>Blog</li>
                     </a>
-                    <a class="link__hover-effect" href="">
+                    <a class="link__hover-effect" href="javascript:void(0)">
                         <li>Contact</li>
                     </a>
                 </ul>
+
+                <a href="javascript:void(0)">
+                    <img onclick="openMenu()" src="./assets/hamburger menu.svg" alt="hammenu" class="btn__menu">
+                </a>
+
+                <div class="menu__backdrop">
+                    <button onclick="closeMenu()" class="btn__menu btn__menu--close">
+                        <img style="padding-right: 3px; cursor: pointer;" src="./assets/close.svg" alt="" class="btn__menu">
+                    </button>
+                    <ul class="menu__links">
+                        <li><a href="javascript:void(0)" class="nav__link" onclick="closeMenu()">About</a></li>
+                        <li><a href="javascript:void(0)" class="nav__link" onclick="closeMenu()">Blog</a></li>
+                        <li><a href="javascript:void(0)" class="nav__link" onclick="closeMenu()">Pricing</a></li>
+                        <li><a href="javascript:void(0)" class="nav__link" onclick="closeMenu()">Contact Us</a></li>
+                        <li><a href="javascript:void(0)" class="nav__link" onclick="closeMenu()">Login</a></li>
+                    </ul>
+                </div>
+
             </div>
         </nav>
 
@@ -43,7 +63,7 @@
                 </p>
                 
                 <div class="searchBox">
-                    <input class="searchbar" type="search" placeholder="Ask the cards a question">
+                    <input class="searchbar" type="search" placeholder="Ask a Question">
                     <button class="searchbarButton">Answer</button>
                 </div>
             </div>
@@ -56,7 +76,7 @@
         </header>
     </section>
 
-    <main>
+    <main data-aos="fade-left">
         <div class="main__header">
             <h2>The Rider-Watie Smith Deck</h2>
 
@@ -66,6 +86,10 @@
                 <option value="MINOR">Minor Arcana</option>
                 <option value="FACE">Face Cards</option>
             </select>
+        </div>
+
+        <div class="loading__background">
+            <i class="fa-solid fa-spinner"></i>
         </div>
 
         <div class="container">
@@ -83,10 +107,10 @@
                 </div> -->
               </div>
             </div>
-          </div>
+        </div>
     </main>
 
-    <footer>
+    <footer data-aos="fade-up">
         <div class="container">
             <div class="row footer__row">
                 <a href="#" class="footer__anchor">
@@ -110,13 +134,13 @@
                     ">
                         LinkedIn
                     </a>
-                    <a href="#" onclick="toggleModal()" class="
+                    <a href="#" class="
                     footer__social--link
                     link__hover-effect
                     ">
                         Contact
                     </a>
-                    <a href="./assets/David Bragg Resume.pdf" target="_blank" class="
+                    <a style="cursor: no-drop;" href="javascript:void(0)" class="
                     footer__social--link
                     link__hover-effect
                     ">
@@ -127,5 +151,9 @@
             </div>
         </div>
     </footer>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+      </script>
 </body>
 </html>

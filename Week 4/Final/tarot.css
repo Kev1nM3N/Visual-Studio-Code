@@ -16,6 +16,7 @@
 
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 * {
@@ -32,12 +33,17 @@ section {
 /* Nav Bar begins */
 
 nav {
+    position: relative;
     width: 100%;
     display: flex;
     justify-content: space-around;
     align-items: center;
     height: 70px;
     padding-top: 12px;
+}
+
+.btn__menu {
+    display: none;
 }
 
 #personal-img {
@@ -112,6 +118,72 @@ a:hover {
 .link__hover-effect:hover::before {
     left: 0;
     width: 100%;
+}
+
+@keyframes slidein {
+      0% {
+        transform: translateX(100%);
+      }
+
+      70% {
+        transform: translateX(-40%);
+      }
+
+      100% {
+        transform: translateX(0);
+      }
+}
+
+.menu__backdrop {
+    position: absolute;
+    height: 400px;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    z-index: 12;
+    margin: 1.5rem 1rem;
+    border-radius: 0.5rem;
+    border-width: 3px;
+    border-style: solid;
+    border-color: rgb(226, 232, 240);
+    background-color: var(--cosmic-latte);
+    padding: 2rem;
+    text-align: center;
+    color: rgb(26 32 44);
+    visibility: hidden;
+}
+
+.menu__open .menu__backdrop {
+    visibility: visible;
+    animation: slidein 300ms ease;
+}
+
+.menu__links {
+    list-style-type: none;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.menu__links li {
+    margin: 0.5rem 0;
+}
+
+.menu__links li:nth-child(6) {
+    margin-top: 1.5rem;
+}
+
+.menu__links .nav__link {
+    font-size: 1.125rem;
+    font-weight: 600;
+    letter-spacing: 0.025em;
+}
+
+.btn__menu--close {
+    position: absolute;
+    left: 18px;
+    top: 24px;
 }
 
 /* Header */
@@ -215,6 +287,31 @@ main {
     background-color: var(--cosmic-latte);
 }
 
+.loading__background {
+    width: 100%;
+    height: 200px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fa-spinner {
+    font-size: 90px;
+    color: var(--Day-Blue-Shadow);
+    animation: rotate 1s infinite;
+}
+
+@keyframes rotate {
+    0% {
+      transform: rotate(0);
+    }
+  
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
 .main__header {
     width: 100%;
     height: 70px;
@@ -228,6 +325,7 @@ main {
     padding-left: 8px;
     height: 1.5rem;
     border-radius: 9px;
+    cursor: pointer;
 }
 
 .main__header h2 {
@@ -254,7 +352,6 @@ main {
 }
 
 .card {
-    /* width: calc(33.3% - 40px); */
     width: calc(100% / 4 - 40px);
     margin: 25px 15px;
     display: flex;
@@ -362,5 +459,276 @@ footer {
 .footer__social--link,
 .footer__copyright {
     color: var(--my-black);
-    /* color: var(--Dusty-White); */
+}
+
+/*
+
+LARGE AND SMALL MOBILE DEVICES
+
+*/
+
+@media (max-width: 1285px) {
+    .searchbarButton {
+        padding: 0.8rem 4.5rem;
+        right: 4.5rem;
+    }
+}
+
+@media (max-width: 1250px) {
+    .searchbar {
+        padding: 0 14rem 0 30px;
+    }
+    
+    .searchbarButton {
+        padding: 0.8rem 4.2rem;
+        right: 4.1rem;
+    }
+}
+
+@media (max-width: 1100px) {
+    header h1 {
+        font-size: 48px;
+    }
+
+    header p {
+        font-size: 18px;
+    }
+
+    .searchbar {
+        padding: 0 13.5rem 0 25px;
+        font-size: 16px;
+    }
+
+    .searchbar::placeholder {
+        font-size: 16px;
+    }
+
+    .searchbarButton {
+        top: 5px;
+        right: 3.8rem;
+        padding: 1rem 4rem;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 1030px) {
+    .searchbar {
+        padding: 0 12.8rem 0 25px;
+    }
+
+    .searchbarButton {
+        right: 3.5rem;
+    }
+}
+
+@media (max-width: 950px) {
+    li, a {
+        font-size: 16px;
+    }
+
+    .searchbarButton {
+        right: 3.3rem;
+    }
+
+    .card {
+        width: calc(33.3% - 40px);
+    }
+
+    .tarot__frontimg {
+        width: 170px;
+    }
+
+    .tarot__name {
+        font-size: 18px;
+    }
+
+    .tarot__category, .tarot__number {
+        font-size: 14px;
+    }
+
+    .footer__copyright {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 900px) {
+    .searchbarButton {
+        right: 3.1rem;
+    }
+}
+
+@media (max-width: 850px) {
+    nav figure {
+        transform: translateX(-36px);
+    }
+
+    .left-side {
+        min-width: 100px;
+    }
+
+    .left-side img {
+        width: 90%;
+    }
+
+    .AboutInfo {
+        display: none;
+    }
+
+    .btn__menu {
+        display: block;
+        width: 35px;
+        transition: all 200ms ease;
+    }
+
+    .btn__menu:hover {
+        filter: invert(1.5);
+    }
+
+    header {
+        margin-top: 20px;
+        flex-direction: column-reverse;
+    }
+
+    header h1 {
+        font-size: 36px;
+        margin-top: 12px;
+        margin-bottom: 0;
+    }
+
+    header p {
+        font-size: 16px;
+        line-height: 24px;
+        padding: 0 36px;
+    }
+
+    .searchbar {
+        padding: 0px 1rem 0 18px;
+        height: 50px;
+    }
+
+    .searchbar::placeholder {
+        text-align: center;
+    }
+
+    .searchbarButton {
+        position: static;
+        margin-top: 10px;
+        padding: 0.7rem 5.5rem;
+    }
+
+    .searchBox {
+        margin: 12px 0;
+    }
+
+    .tarot__frontimg {
+        width: 155px;
+    }
+
+    .footer__logo--img {
+        width: 155px;
+    }
+}
+
+@media (max-width: 700px) {
+    nav figure {
+        transform: translateX(-34px);
+    }
+
+    header h1 {
+        font-size: 28px;
+    }
+
+    header p {
+        padding: 0 22px;
+        font-size: 15px;
+    }
+
+    .searchbarButton {
+        padding: 0.7rem 3.3rem;
+    }
+
+    .main__header h2 {
+        font-size: 20px;
+    }
+
+    .tarot__name {
+        font-size: 17px;
+    }
+
+    .footer__logo--img {
+        width: 140px;
+    }
+}
+
+@media (max-width: 560px) {
+    nav figure {
+        transform: translateX(-37px);
+    }
+
+    header p {
+        padding: 0;
+    }
+
+    .card {
+        width: calc(100% / 2 - 40px);
+    }
+
+    .footer__logo--img {
+        width: 120px;
+    }
+
+    .top {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 500px) {
+    .main__header h2 {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 430px) {
+    .left-side img {
+        width: 80%;
+    }
+
+    .card {
+        width: calc(100% / 1 - 40px);
+    }
+
+    .footer__social--link {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 375px) {
+    .right-side a img {
+        width: 25px;
+    }
+
+    .left-side img {
+        width: 70%;
+    }
+
+    .header__right-side img {
+        width: 150%;
+        transform: translate(-37px);
+    }
+
+    nav figure {
+        transform: translateX(-38px);
+    }
+
+    .searchbarButton {
+        padding: 0.7rem 2rem;
+    }
+
+    .main__header h2 {
+        display: none;
+    }
+
+    .footer__social--list {
+        display: none;
+    }
 }
