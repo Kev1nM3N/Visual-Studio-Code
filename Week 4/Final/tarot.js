@@ -1,8 +1,7 @@
 //https://tarotapi.dev/api/v1/cards
-let cards;
 let cardList = document.querySelector(`.card__list`);
 let loadingBackground = document.querySelector(`.loading__background`)
-let mainPage = document.querySelector('.card__list');
+
 
 async function renderCards (filter){
     let response = await fetch(`https://tarotapi.dev/api/v1/cards`);
@@ -10,8 +9,8 @@ async function renderCards (filter){
     let allCards = data.cards;
     let onlyMajorCards = allCards.filter((element) => element.type === "major");
 
-    //editing the cards to my liking
-
+    
+    //EDITING THE CARDS TO MY LIKING
     let storeIn = onlyMajorCards.splice(-2, 1);
     storeIn[0].value = "0";
     onlyMajorCards.unshift(storeIn[0]);
@@ -22,6 +21,7 @@ async function renderCards (filter){
     let mergedCards = [...newMajorCards, ...allCards.filter((card) => card.type !== "major")];
     let majorMergedCards = mergedCards.filter((element) => element.type === "major");
     let minorMergedCards = mergedCards.filter((element) => element.type === "minor");
+    console.log(minorMergedCards);
 
     minorMergedCards.find((element) => {
         if (["page", "knight", "queen", "king"].includes(element.value)){
@@ -31,7 +31,7 @@ async function renderCards (filter){
 
     let faceMergedCards = minorMergedCards.filter((element) => element.category);
 
-    //now adding images to every card
+    //NOW ADDING IMAGES TO EVERY CARD
 
     mergedCards.forEach((card) => {
         if (card.type === "major") {
@@ -45,10 +45,10 @@ async function renderCards (filter){
                 card.image = `./assets/tarotImages/faceImages/${card.name}.jpg`
             }
         }
-    })
-    console.log(mergedCards);
+    });
 
-    //Editing the DOM
+
+    //EDITING THE DOM
     cardList.innerHTML = mergedCards.map((element) => renderCardsHTML(element)).join(``);
 
     if (filter === 'MAJOR'){
@@ -64,6 +64,7 @@ async function renderCards (filter){
     loadingBackground.remove()
 }
 
+//USED A SETTIMEOUT FOR A LOADING STATE
 setTimeout(() => {
     renderCards();
 }, 3000);
@@ -78,7 +79,7 @@ function renderCardsHTML (element) {
 
                 <p class="tarot__name">${element.name}</p>
                 <p class="tarot__category">${element.type.toUpperCase()}</p>
-                <p class="tarot__number">${element.value}</p>
+                <p class="tarot__number">${element.value_int}</p>
             </div>`
 }
 
