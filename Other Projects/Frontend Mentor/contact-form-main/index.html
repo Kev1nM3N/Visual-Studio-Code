@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <title>Frontend Mentor | Contact form</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body class="bg-green-200 py-8 flex justify-center">
+  <div class="mx-4 w-full flex justify-center">
+    <form action="" class="actionForm">
+      <h1 class="text-3xl font-semibold mb-4">Contact Us</h1>
+      
+      <div class="flex max-sm:flex-col">
+        <div class="left-part">
+          <label>First Name *</label>
+          <input required type="search" value="" class="inputCustom">
+        </div>
+        <div class="left-part">
+          <label>Last Name *</label>
+          <input required type="search" value="" class="inputCustom">
+        </div>
+      </div>
+
+      <div class="flex">
+        <div class="w-full mr-4 my-5 max-sm:mr-0">
+          <label for="">Email Address *</label>
+          <input required type="email" class="h-8 w-full outline outline-1 rounded-sm">
+        </div>
+      </div>
+
+      <div class="w-full">
+        <label for="">Query Type *</label>
+        <div class="flex mt-1 max-sm:flex-col">
+          <div class="left-box">
+              <input required type="radio" class="mx-5 max-sm:mx-2" name="group" id=""> <!--both radios need to have the same name to be in a group-->
+              <label for="general">General Enquiry</label>
+          </div>
+  
+          <div class="left-box">
+            <input type="radio" class="mx-5 max-sm:mx-2" name="group" id="">
+            <label for="support">Support Request</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex">
+        <div class="w-full mr-4 my-5 max-sm:mr-0">
+          <label for="">Message *</label>
+          <textarea class="w-full outline outline-1 rounded-sm" rows="4" name="" id=""></textarea>
+        </div>
+      </div>
+
+      <div class="flex items-center">
+        <input class="mr-4 w-4 " type="checkbox" name="" id="">
+        <p class="text-sm">I consent to being contacted by the team *</p>
+      </div>
+
+      <div class="mt-6 mr-4">
+        <button class="w-full bg-green-800 text-white h-11 rounded-md
+         hover:bg-green-700 transition-all duration-200">Submit</button>
+      </div>
+
+    </form>
+  </div>
+  
+  
+</body>
+</html>
