@@ -6,6 +6,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
   <title>Frontend Mentor | Contact form</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <script defer src="./script.js"></script>
   <link rel="stylesheet" href="./style.css">
 </head>
 <body class="bg-green-200 py-8 flex justify-center">
@@ -16,31 +17,31 @@
       <div class="flex max-sm:flex-col">
         <div class="left-part">
           <label>First Name *</label>
-          <input required type="search" value="" class="inputCustom">
+          <input required type="text" value="" class="inputCustom">
         </div>
         <div class="left-part">
           <label>Last Name *</label>
-          <input required type="search" value="" class="inputCustom">
+          <input required type="text" value="" class="inputCustom">
         </div>
       </div>
 
       <div class="flex">
         <div class="w-full mr-4 my-5 max-sm:mr-0">
           <label for="">Email Address *</label>
-          <input required type="email" class="h-8 w-full outline outline-1 rounded-sm">
+          <input required type="email" class="h-8 w-full outline outline-1 rounded-sm pl-4">
         </div>
       </div>
 
       <div class="w-full">
         <label for="">Query Type *</label>
         <div class="flex mt-1 max-sm:flex-col">
-          <div class="left-box">
-              <input required type="radio" class="mx-5 max-sm:mx-2" name="group" id=""> <!--both radios need to have the same name to be in a group-->
+          <div class="left-box" name="group">
+              <input required type="radio" class="mx-5 cursor-pointer max-sm:mx-2" name="group" id=""> <!--both radios need to have the same name to be in a group-->
               <label for="general">General Enquiry</label>
           </div>
   
-          <div class="left-box">
-            <input type="radio" class="mx-5 max-sm:mx-2" name="group" id="">
+          <div class="left-box" name="group">
+            <input type="radio" class="mx-5 cursor-pointer max-sm:mx-2" name="group" id="">
             <label for="support">Support Request</label>
           </div>
         </div>
@@ -49,7 +50,7 @@
       <div class="flex">
         <div class="w-full mr-4 my-5 max-sm:mr-0">
           <label for="">Message *</label>
-          <textarea class="w-full outline outline-1 rounded-sm" rows="4" name="" id=""></textarea>
+          <textarea class="w-full px-4 pt-2 outline outline-1 rounded-sm" rows="4" name="" id=""></textarea>
         </div>
       </div>
 
@@ -59,8 +60,8 @@
       </div>
 
       <div class="mt-6 mr-4">
-        <button class="w-full bg-green-800 text-white h-11 rounded-md
-         hover:bg-green-700 transition-all duration-200">Submit</button>
+        <button class="w-full bg-green-700 text-white h-11 rounded-md
+         hover:bg-green-800 transition-all duration-200">Submit</button>
       </div>
 
     </form>
