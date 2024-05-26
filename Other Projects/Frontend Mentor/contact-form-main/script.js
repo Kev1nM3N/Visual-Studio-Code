@@ -1,4 +1,16 @@
 let leftBox = document.querySelector(`.left-box`);
-let radioButton = document.querySelectorAll(`input[type=radio]`);
+let radioButton = document.querySelector(`input[type=radio]`);
+let secondRadio = document.getElementById('radioSecond')
 
-console.log(radioButton);
+
+radioButton.addEventListener("click", function(){
+    if (radioButton.checked === true){
+        leftBox.style.backgroundColor = "hsl(148, 38%, 91%)"
+    }
+})
+
+secondRadio.addEventListener("click", function() {
+    if (secondRadio.checked === true){
+        leftBox.style.backgroundColor = "hsl(148, 38%, 91%)"
+    }
+})

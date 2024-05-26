@@ -48,6 +48,11 @@ textarea:hover{
     margin-right: 16px;
 }
 
+/* input[type="radio"]:checked + label {
+    background-color: #e6f4ea;
+    border-color: #00bfa6;
+} */
+
 
 @media (max-width: 640px) {
     .actionForm {
