@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <title>Frontend Mentor | Social links profile</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+    *{
+      font-family: Inter;
+    }
+
+    :root {
+      --green-color: hsl(75, 94%, 57%);
+      --off-black: hsl(0, 0%, 8%);
+      --dark-grey: hsl(0, 0%, 12%);
+      --normal-grey: hsl(0, 0%, 20%);
+      --font-para-size: 14px;
+      --my-color: #d0cece;
+    }
+
+  </style>
+</head>
+<body class="flex justify-center items-center bg-[var(--off-black)] h-screen w-full">
+    <div class="w-[360px] bg-[var(--dark-grey)] mx-12 flex justify-center rounded-xl">
+        <div class="h-full w-4/5 py-8">
+          <figure class="h-20 w-full">
+            <img src="./assets/images/avatar-jessica.jpeg" alt="" class="pfp h-full rounded-full m-auto">
+          </figure>
+
+          <div class="text-center mt-8">
+            <h1 class="text-white font-semibold text-2xl  mb-1.5">Jessica Randall</h1>
+            <h2 class="text-[var(--green-color)] text-sm mb-5">London, United Kingdom</h2>
+            <p class="text-[var(--my-color)] text-xs">"Front-end developer and avid reader."</p>
+          </div>
+
+          <div class="btns flex flex-col pt-5">
+            <button class="btn transition-all duration-150 text-white px-4 bg-[var(--normal-grey)] py-2.5 text-sm font-semibold my-2 rounded-lg hover:bg-[var(--green-color)] hover:text-[var(--off-black)] hover:font-bold">Github</button>
+            <button class="btn transition-all duration-150 text-white px-4 bg-[var(--normal-grey)] py-2.5 text-sm font-semibold my-2 rounded-lg hover:bg-[var(--green-color)] hover:text-[var(--off-black)] hover:font-bold">Frontend Mentor</button>
+            <button class="btn transition-all duration-150 text-white px-4 bg-[var(--normal-grey)] py-2.5 text-sm font-semibold my-2 rounded-lg hover:bg-[var(--green-color)] hover:text-[var(--off-black)] hover:font-bold">LinkedIn</button>
+            <button class="btn transition-all duration-150 text-white px-4 bg-[var(--normal-grey)] py-2.5 text-sm font-semibold my-2 rounded-lg hover:bg-[var(--green-color)] hover:text-[var(--off-black)] hover:font-bold">Twitter</button>
+            <button class="btn transition-all duration-150 text-white px-4 bg-[var(--normal-grey)] py-2.5 text-sm font-semibold my-2 rounded-lg hover:bg-[var(--green-color)] hover:text-[var(--off-black)] hover:font-bold">Instagram</button>
+          </div>
+        </div>
+    </div>
+</body>
+</html>
