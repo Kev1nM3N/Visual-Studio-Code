@@ -19,5 +19,30 @@
 
 body{
     background: #3C5377;
+    text-align: center;
 }
 
+input[type='text']{
+    margin: 15px 0;
+    width: 26rem;
+    height: 2rem;
+    padding: 0 6px;
+}
+
+button {
+    border-radius: 9px;
+    padding: 8px 24px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--cosmic-latte);
+}
+
+p {
+    margin-top: 0.5rem;
+    font-size: 20px;
+    color: var(--white);
+    font-style: italic;
+}
