@@ -50,9 +50,14 @@ async function renderCards (filter, searchBarValue){
         }
     });
 
-    // If searchBarValue is provided, filter the cards to show only the matching card
+    // If searchBarValue is provided, filter the cards to show only those containing the searchBarValue in their name
     if (searchBarValue) {
-        mergedCards = mergedCards.filter(card => card.name.toLowerCase() === searchBarValue.toLowerCase());
+        mergedCards = mergedCards.filter(card => card.name.toLowerCase().includes(searchBarValue.toLowerCase()));
+    }
+
+    if (searchBarValue && mergedCards.length === 0) {
+        cardList.innerHTML = `<div class="no-results">The card you are looking for does not exist in our database</div>`;
+        return;
     }
 
 
