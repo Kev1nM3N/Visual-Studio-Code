@@ -1,9 +1,11 @@
 //https://tarotapi.dev/api/v1/cards
 let cardList = document.querySelector(`.card__list`);
+let mainHeading = document.querySelector("main");
 let loadingBackground = document.querySelector(`.loading__background`)
+let searchBar = document.querySelector('.searchbar')
 
 
-async function renderCards (filter){
+async function renderCards (filter, searchBarValue){
     let response = await fetch(`https://tarotapi.dev/api/v1/cards`);
     let data = await response.json();
     let allCards = data.cards;
@@ -21,7 +23,8 @@ async function renderCards (filter){
     let mergedCards = [...newMajorCards, ...allCards.filter((card) => card.type !== "major")];
     let majorMergedCards = mergedCards.filter((element) => element.type === "major");
     let minorMergedCards = mergedCards.filter((element) => element.type === "minor");
-    console.log(minorMergedCards);
+    console.log(allCards);
+    console.log(searchBarValue);
 
     minorMergedCards.find((element) => {
         if (["page", "knight", "queen", "king"].includes(element.value)){
@@ -47,6 +50,11 @@ async function renderCards (filter){
         }
     });
 
+    // If searchBarValue is provided, filter the cards to show only the matching card
+    if (searchBarValue) {
+        mergedCards = mergedCards.filter(card => card.name.toLowerCase() === searchBarValue.toLowerCase());
+    }
+
 
     //EDITING THE DOM
     cardList.innerHTML = mergedCards.map((element) => renderCardsHTML(element)).join(``);
@@ -61,7 +69,12 @@ async function renderCards (filter){
         cardList.innerHTML = faceMergedCards.map((element) => renderCardsHTML(element)).join(``);
     }
 
-    loadingBackground.remove()
+    loadingBackground.remove();
+
+    // Scroll to the first card if a search is performed
+    if (searchBarValue && mergedCards.length > 0) {
+        mainHeading.scrollIntoView({ behavior: 'smooth' });
+    }
 }
 
 //USED A SETTIMEOUT FOR A LOADING STATE
@@ -81,6 +94,17 @@ function renderCardsHTML (element) {
                 <p class="tarot__category">${element.type.toUpperCase()}</p>
                 <p class="tarot__number">${element.value_int}</p>
             </div>`
+}
+
+function singleCardSearch() {
+    let searchBarValue = searchBar.value;
+    renderCards(undefined, searchBarValue);
+}
+
+function handleKeyDown (event){
+    if (event.key === `Enter`){
+        singleCardSearch()
+    }
 }
 
 function filterCards (event){

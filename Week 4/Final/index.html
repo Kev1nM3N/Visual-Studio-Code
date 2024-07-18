@@ -59,13 +59,13 @@
                 <h1>Become familiar with the Tarot Cards!</h1>
                 <p>An exciting understanding of yourself awaits! Tarot is the most popular divinity tool that can
                     forecast and offer interpretations in love, career and finance whereas yes/no tarot is
-                     useful for answering users' questions in a fascinating way.
+                    useful for answering users' questions in a fascinating way.
                 </p>
                 
                 <div class="searchBox">
-                    <input class="searchbar" type="search" placeholder="Ask a Question">
-                    <button class="searchbarButton">Answer</button>
+                    <input class="searchbar" type="search" onkeydown="handleKeyDown(event)" placeholder="Find a Card">
                 </div>
+                <button class="searchbarButton" onclick="singleCardSearch()">Search</button>
             </div>
 
             <div class="header__right-side">
