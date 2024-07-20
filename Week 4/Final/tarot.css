@@ -260,7 +260,6 @@ header h1, header p {
     border-color: rgb(160 174 192);
 }
 
-
 .searchbar:focus {
     border-color: pink;
     outline: 0;
